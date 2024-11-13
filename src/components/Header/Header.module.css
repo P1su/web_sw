@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 13.2rem;
+}
+.navBar {
+  display: flex;
+  gap: 8rem;
+  font-family: 'Pretendard';
+  font-size: 24px;
+  font-weight: 700;
+}
+.nav-items {
+  font-family: 'Pretendard';
+  font-size: 24px;
+  font-weight: 700;
+}
