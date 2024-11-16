@@ -1,11 +1,11 @@
 import styles from './BtnSmall.module.css';
 
-const BtnLarge = ({ children, isFilled }) => {
+const BtnSmall = ({ children, isFilled }) => {
   return(
-    <button className={isFilled ? styles.btnLargeFilled : styles.btnLargeDefault}>
+    <button className={isFilled ? styles.btnSmallFilled : styles.btnSmallDefault}>
       {children}
     </button>
   );
 };
 
-export default BtnLarge;
+export default BtnSmall;

@@ -1,7 +1,7 @@
-.btnSmallDefault {
+.btnPrimaryDefault {
   width: 20rem;
   height: 6rem;
-  border-radius: 30px;
+  border-radius: 10px;
   border: 2px solid #3c3c3c;
   background-color: #ffffff;
   font-family: 'Pretendard';
@@ -12,10 +12,10 @@
   color: #3c3c3c;
 }
 
-.btnSmallFilled {
+.btnPrimaryFilled {
   width: 20rem;
   height: 6rem;
-  border-radius: 30px;
+  border-radius: 10px;
   border: none;
   background-color: #3c3c3c;
   font-family: 'Pretendard';
