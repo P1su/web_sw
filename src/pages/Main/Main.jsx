@@ -7,11 +7,12 @@ import Search from '../../components/forms/search/Search';
 import Textarea from '../../components/forms/textarea/Textarea';
 import MaterialItem from '../../components/Material/MaterialItem/MaterialItem';
 import MaterialList from '../../components/Material/MaterialList/MaterialList';
+import Title from '../../components/Title/Title';
 
 const Main = () => {
   return(
     <div className={styles.test}>
-      메인페이지
+      <Title>메인페이지</Title>
       <BtnLarge isFilled={false}>큰 버튼</BtnLarge>
       <BtnLarge isFilled={true}>큰 버튼</BtnLarge>
       <BtnSmall isFilled={false}>작은 버튼</BtnSmall>
