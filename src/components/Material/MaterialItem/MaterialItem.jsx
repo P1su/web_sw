@@ -1,14 +1,15 @@
 import styles from './MaterialItem.module.css';
 import mockImage from '../../../assets/img/mockItem.png';
 
-const MaterialItem = () => {
+const MaterialItem = ({ itemValue }) => {
+  console.log(itemValue?.materialType);
   return(
     <div className={styles.materialItemWrapper}>
       <img src={mockImage} className={styles.materialImage} />
       <div className={styles.itemBox}>
-        <p className={styles.materialType}>자재 분류</p>
-        <p className={styles.materialNum}>자재 번호</p>
-        <p className={styles.materialName}>자재 이름</p>
+        <p className={styles.materialType}>{itemValue?.materialType}</p>
+        <p className={styles.materialNum}>{itemValue?.materialNum}</p>
+        <p className={styles.materialName}>{itemValue?.materialName}</p>
       </div>
     </div>
   );
