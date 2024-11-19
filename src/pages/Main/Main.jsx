@@ -5,6 +5,7 @@ import BtnSmall from './../../components/buttons/Small/BtnSmall';
 import Input from '../../components/forms/input/Input';
 import Search from '../../components/forms/search/Search';
 import Textarea from '../../components/forms/textarea/Textarea';
+import MaterialItem from '../../components/Material/MaterialItem/MaterialItem';
 
 const Main = () => {
   return(
@@ -17,6 +18,7 @@ const Main = () => {
       <Input title='성명' placeholder='성명'/> 
       <Search placeholder='원하시는 자재를 입력하세요'/>
       <Textarea placeholder='자재 설명 입력' title='자재'/>
+      <MaterialItem />
     </div>
   );
 };
