@@ -1,11 +1,4 @@
 .inputLargeWrapper {
-  width: 25rem;
-  height: 8rem;
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
 }
 .titleText {
   width: 100%;
@@ -16,6 +9,7 @@
   font-weight: 500;
   line-height: normal;
   text-align: left;
+  padding-bottom: 1rem;
 }
 .textInput {
   width: 100%;
