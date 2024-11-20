@@ -20,7 +20,7 @@ const MaterialList = () => {
           <BtnPrimary key={type}>{type}</BtnPrimary>
         ))}
       </div>
-      <Search />
+      <Search placeholder='원하시는 자재를 검색하세요'/>
       <div className={styles.listBox}>
         {materialList.map((materialItem) => (
           <MaterialItem key={materialItem.materialNum} itemValue={materialItem}/>
