@@ -1,7 +1,7 @@
 .inputLargeWrapper {
+  width: 30rem;
 }
 .titleText {
-  width: 100%;
   color: #000;
   font-family: Pretendard;
   font-size: 24px;
@@ -23,6 +23,7 @@
   font-weight: 400;
   line-height: normal;
   padding-left: 2rem;
+  box-sizing: border-box;
 }
 .textInput::placeholder {
   color: #a9a9a9;

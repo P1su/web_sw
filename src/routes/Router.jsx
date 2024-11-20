@@ -3,6 +3,7 @@ import Main from '../pages/Main/Main';
 import Layout from '../layouts/Layout';
 import Materials from '../pages/Materials/Materials';
 import Estimate from '../pages/Estimate/Estimate';
+import Login from '../pages/Login/Login';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: '/estimate',
         element: <Estimate />,
+      },
+      {
+        path: '/login',
+        element: <Login />,
       },
     ],
   },
