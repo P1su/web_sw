@@ -1,7 +1,10 @@
 import MaterialItem from '../MaterialItem/MaterialItem';
+import BtnPrimary from '../../buttons/BtnPrimary/BtnPrimary';
+import Search from '../../forms/search/Search';
 import styles from './MaterialList.module.css';
 
 const MaterialList = () => {
+  const types = ['자재', '벽지', '몰딩', '어쩌구', '저쩌구'];
   const materialList = [
     {materialType: '몰딩', materialNum: 1, materialName: '벽지', },
     {materialType: '벽지', materialNum: 2, materialName: '자재1', },
@@ -12,9 +15,17 @@ const MaterialList = () => {
 
   return(
     <div className={styles.materialListWrapper}>
-      {materialList.map((materialItem) => (
-        <MaterialItem key={materialItem.materialNum} itemValue={materialItem}/>
-      ))}
+      <div className={styles.btnField}>
+        {types.map(type =>(
+          <BtnPrimary key={type}>{type}</BtnPrimary>
+        ))}
+      </div>
+      <Search />
+      <div className={styles.listBox}>
+        {materialList.map((materialItem) => (
+          <MaterialItem key={materialItem.materialNum} itemValue={materialItem}/>
+        ))}
+      </div>
     </div>
   );
 };
