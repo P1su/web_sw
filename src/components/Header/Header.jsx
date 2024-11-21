@@ -8,7 +8,7 @@ const Header = () => {
   ];
   return(
     <header className={styles.header}>
-      <img src={logo}/>
+      <img src={logo} width={'200px'}/>
       <nav className={styles.navBar}>
         {
           navItems.map((item) => (
