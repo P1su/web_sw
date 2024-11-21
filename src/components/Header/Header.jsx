@@ -1,10 +1,12 @@
 import styles from './Header.module.css';
 import logo from '../../assets/svg/logo.svg';
+import { useNavigate } from 'react-router-dom';
 const Header = () => {
+  const navigate = useNavigate();
   const navItems = [
-    { label: '후기', path: '/' },
-    { label: '자재', path: '/about' },
-    { label: '문의', path: '/contact' },
+    { label: '후기', path: '/', },
+    { label: '자재', path: '/materials', },
+    { label: '문의', path: '/contact', },
   ];
   return(
     <header className={styles.header}>
@@ -12,7 +14,7 @@ const Header = () => {
       <nav className={styles.navBar}>
         {
           navItems.map((item) => (
-            <a key={item.label} className={styles.navItems}>
+            <a key={item.label} className={styles.navItems} onClick = {() => navigate(item.path)}>
               {item.label}
             </a>
           ))
