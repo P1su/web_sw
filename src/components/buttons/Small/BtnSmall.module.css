@@ -1,6 +1,6 @@
 .btnSmallDefault {
   width: 20rem;
-  height: 6rem;
+  height: 5rem;
   border-radius: 30px;
   border: 2px solid #3c3c3c;
   background-color: #ffffff;
@@ -14,7 +14,7 @@
 
 .btnSmallFilled {
   width: 20rem;
-  height: 6rem;
+  height: 5rem;
   border-radius: 30px;
   border: none;
   background-color: #3c3c3c;

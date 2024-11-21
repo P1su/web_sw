@@ -12,7 +12,7 @@
   width: 30rem;
   height: 30rem;
 }
-.materialType {
+.pattern {
   color: var(--B1, #3e3e3e);
   font-family: Pretendard;
   font-size: 14px;
@@ -20,14 +20,14 @@
   font-weight: 500;
   line-height: normal;
 }
-.materialNum {
+.coating {
   font-family: Pretendard;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
-.materialName {
+.name {
   font-family: Pretendard;
   font-size: 16px;
   font-style: normal;

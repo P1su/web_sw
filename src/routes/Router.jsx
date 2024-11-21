@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout';
 import Materials from '../pages/Materials/Materials';
 import Estimate from '../pages/Estimate/Estimate';
 import Login from '../pages/Login/Login';
+import MaterialDetail from '../pages/Materials/MaterialDetail/MaterialDetail';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: '/materials',
         element: <Materials />,
+      },
+      {
+        path: '/material/:name',
+        element: <MaterialDetail />,
       },
       {
         path: '/estimate',
