@@ -5,6 +5,7 @@ import Materials from '../pages/Materials/Materials';
 import Estimate from '../pages/Estimate/Estimate';
 import Login from '../pages/Login/Login';
 import MaterialDetail from '../pages/Materials/MaterialDetail/MaterialDetail';
+import Compare from '../pages/Materials/Compare/Compare';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: '/material/:name',
         element: <MaterialDetail />,
+      },
+      {
+        path: '/compare',
+        element: <Compare />,
       },
       {
         path: '/estimate',

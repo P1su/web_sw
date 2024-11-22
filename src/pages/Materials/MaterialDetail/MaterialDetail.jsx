@@ -8,8 +8,8 @@ const MaterialDetail = () => {
   const { name } = useParams();
   const navigate = useNavigate();
 
-  const handleNavigate = (path) => {
-    navigate(path);
+  const handleNavigate = (path, state) => {
+    navigate(path, { state });
   };
   console.log(name);
   //name 통해서 get이나 포스트로 받아오기
@@ -24,7 +24,7 @@ const MaterialDetail = () => {
       <p className={styles.infoTextSpan}>{`코팅: ${item.coating}`}</p>
       <div className={styles.buttonField}>
         <BtnSmall onClick={() => handleNavigate('/materials')} isFilled={false}>목록으로 돌아가기</BtnSmall>
-        <BtnSmall onClick={() => handleNavigate('/materials')} isFilled={false}>자재 비교하기</BtnSmall>
+        <BtnSmall onClick={() => handleNavigate('/compare', item)} isFilled={false}>자재 비교하기</BtnSmall>
       </div>
     </div>
   );

@@ -1,0 +1,9 @@
+.comparePageWrapper {
+  width: 100%;
+}
+.compareBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 6rem;
+}
