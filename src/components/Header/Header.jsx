@@ -6,7 +6,7 @@ const Header = () => {
   const navItems = [
     { label: '후기', path: '/', },
     { label: '자재', path: '/materials', },
-    { label: '문의', path: '/contact', },
+    { label: '견적 문의', path: '/estimate', },
   ];
   return(
     <header className={styles.header}>
