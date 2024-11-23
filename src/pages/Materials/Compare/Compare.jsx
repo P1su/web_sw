@@ -1,6 +1,6 @@
 import styles from './Compare.module.css';
 import Title from './../../../components/Title/Title';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import MaterialItem from './../../../components/Material/MaterialItem/MaterialItem';
 import { useState } from 'react';
 import mock2 from '../../../assets/img/mockItem.png'
@@ -12,6 +12,7 @@ import Modal from '../../../components/Modal/Modal';
 import MaterialList from './../../../components/Material/MaterialList/MaterialList';
 
 const Compare = () => {
+  const navigate = useNavigate();
   const initialValue = {
     pattern: '',
     coating: '',
@@ -28,6 +29,9 @@ const Compare = () => {
   const [compaerItem, setCompareItem] = useState(initialValue);
   const [isOpen, openModal, closeModal] = useModal();
 
+  const handlePrev = () => {
+    navigate('/materials');
+  }
   return(
     <div className={styles.comparePageWrapper}>
       {
@@ -53,7 +57,7 @@ const Compare = () => {
           }
         </div>
       </div>
-      <BtnSmall>목록으로 돌아가기</BtnSmall>
+      <BtnSmall onClick={handlePrev}>목록으로 돌아가기</BtnSmall>
     </div>
   );
 };
