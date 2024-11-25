@@ -10,6 +10,12 @@
   font-weight: 700;
   line-height: normal;
   color: #3c3c3c;
+
+  &:hover {
+    background-color: #3c3c3c;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+  }
 }
 
 .btnSmallFilled {
@@ -24,4 +30,9 @@
   font-weight: 700;
   line-height: normal;
   color: #ffffff;
+  &:hover {
+    background-color: #ffffff;
+    color: #3c3c3c;
+    border: 2px solid #3c3c3c;
+  }
 }
