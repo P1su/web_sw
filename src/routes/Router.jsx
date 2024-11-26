@@ -7,6 +7,7 @@ import Login from '../pages/Login/Login';
 import MaterialDetail from '../pages/Materials/MaterialDetail/MaterialDetail';
 import Compare from '../pages/Materials/Compare/Compare';
 import WriteEstimate from '../pages/Estimate/WriteEstimate/WriteEstimate';
+import Reservation from '../pages/Reservation/Reservation';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: '/estimate',
         element: <Estimate />,
+      },
+      {
+        path: '/reservation',
+        element: <Reservation />,
       },
       {
         path: '/write-estimate',
