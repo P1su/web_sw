@@ -9,9 +9,13 @@ const Header = () => {
     { label: '자재', path: '/materials', },
     { label: '견적 문의', path: '/estimate', },
   ];
+  const handleMain = () => {
+    navigate('/');
+  };
+
   return(
     <header className={styles.header}>
-      <img src={logo} width={'200px'}/>
+      <img src={logo} width={'200px'} onClick={() => handleMain()}/>
       <nav className={styles.navBar}>
         {
           navItems.map((item) => (
