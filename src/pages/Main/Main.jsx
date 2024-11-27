@@ -8,6 +8,7 @@ import Textarea from '../../components/forms/textarea/Textarea';
 import MaterialItem from '../../components/Material/MaterialItem/MaterialItem';
 import MaterialList from '../../components/Material/MaterialList/MaterialList';
 import Title from '../../components/Title/Title';
+import MyCalendar from '../../components/Calendar/MyCalendar';
 
 const Main = () => {
   return(
@@ -22,6 +23,7 @@ const Main = () => {
       <Textarea placeholder='자재 설명 입력' title='자재'/>
       <MaterialItem />
       <MaterialList />
+      <MyCalendar />
     </div>
   );
 };
