@@ -1,6 +1,8 @@
 import styles from './Header.module.css';
 import logo from '../../assets/svg/logo.svg';
 import { useNavigate } from 'react-router-dom';
+
+import newLogo from '../../assets/svg/newLogo.svg';
 const Header = () => {
   const navigate = useNavigate();
   const navItems = [
@@ -10,7 +12,7 @@ const Header = () => {
   ];
   return(
     <header className={styles.header}>
-      <img src={logo} width={'200px'}/>
+      <img src={newLogo} width={'200px'}/>
       <nav className={styles.navBar}>
         {
           navItems.map((item) => (
