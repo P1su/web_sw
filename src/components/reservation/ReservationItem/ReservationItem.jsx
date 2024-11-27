@@ -1,8 +1,8 @@
 import styles from './ReservationItem.module.css';
 
-const ReservationItem = ({ date, title, name }) => {
+const ReservationItem = ({ date, title, name, onClick }) => {
   return (
-    <div className={styles.reservationItemWrapper}>
+    <div className={styles.reservationItemWrapper} onClick={() => {onClick()}}>
       <div className={styles.textArea}>
         <p className={styles.dateText}>{date}</p>
         <p className={styles.titleText}>{title}</p>
