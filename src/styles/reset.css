@@ -19,7 +19,10 @@ h6,
 p,
 blockquote,
 pre,
-a,
+a {
+  cursor: pointer;
+}
+,
 abbr,
 acronym,
 address,
