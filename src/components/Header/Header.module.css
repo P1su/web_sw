@@ -3,15 +3,25 @@
   align-items: center;
   justify-content: space-between;
   height: 13.2rem;
+  padding: 0 5rem;
 }
 .navBar {
   display: flex;
   gap: 8rem;
   font-family: 'Pretendard';
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
 }
-.nav-items {
+.navItems {
+  cursor: pointer;
+  color: #3e3e3e;
+  &:hover {
+    color: #111111;
+  }
+}
+.linkItems {
+  display: flex;
+  gap: 3rem;
   font-family: 'Pretendard';
   font-size: 24px;
   font-weight: 700;
