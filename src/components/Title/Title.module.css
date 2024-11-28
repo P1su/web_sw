@@ -1,12 +1,18 @@
 .titleWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  color: #000;
+  height: 40rem;
+  background-image: url('../../assets/img/Interior1.jpg');
+  color: #ffffff;
+
   font-family: Pretendard;
-  font-size: 32px;
+  font-size: 50px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   line-height: normal;
-  text-align: start;
+
   padding-top: 3rem;
   padding-bottom: 3rem;
 }

@@ -5,7 +5,7 @@ import styles from './Reservation.module.css';
 const Reservation = () => {
   return(
     <div className={styles.pageWrapper}>
-      <Title>문의 내역</Title>
+      <Title>Reservation</Title>
       <ReservationList />
     </div>
   );
