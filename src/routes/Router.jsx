@@ -9,6 +9,7 @@ import Compare from '../pages/Materials/Compare/Compare';
 import WriteEstimate from '../pages/Estimate/WriteEstimate/WriteEstimate';
 import Reservation from '../pages/Reservation/Reservation';
 import ReservationDetail from '../pages/Reservation/ReservationDetail/ReservationDetail';
+import Event from '../pages/Event/Event';
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login />,
+      },
+      {
+        path: '/event',
+        element: <Event />,
       },
     ],
   },

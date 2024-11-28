@@ -5,9 +5,9 @@ import logo from '../../assets/svg/logo.svg';
 const Header = () => {
   const navigate = useNavigate();
   const navItems = [
-    { label: '후기', path: '/', },
     { label: '자재', path: '/materials', },
-    { label: '견적 문의', path: '/estimate', },
+    { label: '견적 문의', path: '/reservation', },
+    { label: '이벤트', path: '/event', },
   ];
   const handleMain = () => {
     navigate('/');
