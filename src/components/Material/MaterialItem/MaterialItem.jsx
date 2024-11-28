@@ -1,15 +1,13 @@
 import styles from './MaterialItem.module.css';
-import mockImage from '../../../assets/img/mockItem.png';
 
-const MaterialItem = ({ itemValue }) => {
-  console.log(itemValue?.materialType);
+const MaterialItem = ({ itemValue, onClick, width, height }) => {
   return(
-    <div className={styles.materialItemWrapper}>
-      <img src={mockImage} className={styles.materialImage} />
+    <div className={styles.materialItemWrapper} onClick={() => onClick()}>
+      <img src={itemValue?.imageUrl} style={{ width: width, height: height }}/>
       <div className={styles.itemBox}>
-        <p className={styles.materialType}>{itemValue?.materialType}</p>
-        <p className={styles.materialNum}>{itemValue?.materialNum}</p>
-        <p className={styles.materialName}>{itemValue?.materialName}</p>
+        <p className={styles.pattern}>{itemValue?.pattern}</p>
+        <p className={styles.coating}>{itemValue?.coating}</p>
+        <p className={styles.name}>{itemValue?.name}</p>
       </div>
     </div>
   );

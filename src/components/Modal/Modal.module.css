@@ -1,0 +1,57 @@
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.modalWrapper {
+  width: 130rem;
+  height: 70vh;
+  background-color: #ffffff;
+  z-index: 9999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  padding: 2rem 2rem 2rem 2rem;
+  overflow-y: auto;
+}
+.deleteField {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 4rem;
+  padding-bottom: 4rem;
+
+  color: var(--placeholder, #bebebe);
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.modalWrapper::-webkit-scrollbar {
+  width: 12px; /* 스크롤바의 너비 */
+}
+
+.modalWrapper::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* 스크롤바 트랙 배경 */
+  border-radius: 10px;
+}
+
+.modalWrapper::-webkit-scrollbar-thumb {
+  background-color: #888; /* 스크롤바 thumb 색상 */
+  border-radius: 10px; /* 둥근 모서리 */
+}
+
+.modalWrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* thumb hover 시 색상 */
+}
+
+.modalWrapper::-webkit-scrollbar-corner {
+  background-color: #f1f1f1; /* 스크롤바 코너 색상 */
+}

@@ -1,7 +1,18 @@
 .materialListWrapper {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.listBox {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
+}
+.btnField {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
 }

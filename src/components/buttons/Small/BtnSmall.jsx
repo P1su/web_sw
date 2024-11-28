@@ -1,8 +1,8 @@
 import styles from './BtnSmall.module.css';
 
-const BtnSmall = ({ children, isFilled }) => {
+const BtnSmall = ({ children, isFilled, onClick }) => {
   return(
-    <button className={isFilled ? styles.btnSmallFilled : styles.btnSmallDefault}>
+    <button onClick={() => onClick()} className={isFilled ? styles.btnSmallFilled : styles.btnSmallDefault}>
       {children}
     </button>
   );
