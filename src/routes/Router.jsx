@@ -10,6 +10,8 @@ import WriteEstimate from '../pages/Estimate/WriteEstimate/WriteEstimate';
 import Reservation from '../pages/Reservation/Reservation';
 import ReservationDetail from '../pages/Reservation/ReservationDetail/ReservationDetail';
 import Event from '../pages/Event/Event';
+import Portfolio from '../pages/Portfolio/Portfolio';
+import PortfolioDetail from '../pages/Portfolio/Detail/PortfolioDetail';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +57,14 @@ const router = createBrowserRouter([
       {
         path: '/event',
         element: <Event />,
+      },
+      {
+        path: '/portfolio',
+        element: <Portfolio />,
+      },
+      {
+        path: '/portfolio/:portfolioId',
+        element: <PortfolioDetail />,
       },
     ],
   },
