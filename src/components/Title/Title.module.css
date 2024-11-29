@@ -4,7 +4,10 @@
   align-items: center;
   width: 100%;
   height: 40rem;
-  background-image: url('../../assets/img/Interior1.jpg');
+  background-image: url('../../assets/img/Interior6.jpg');
+  background-position: center; /* 배경 이미지를 가로/세로 모두 중앙에 배치 */
+  background-size: cover; /* 이미지가 요소를 가득 채우도록 크기 조정 */
+  background-repeat: no-repeat;
   color: #ffffff;
 
   font-family: Pretendard;

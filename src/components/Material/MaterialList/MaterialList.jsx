@@ -4,9 +4,11 @@ import Search from '../../forms/search/Search';
 import styles from './MaterialList.module.css';
 import { useNavigate } from 'react-router-dom';
 import mockImg from '../../../assets/img/mockItem.png';
+import { useState } from 'react';
 
 const MaterialList = () => {
   const navigate = useNavigate();
+  const [company, setComapny] = useState('');
   const types = ['자재', '벽지', '몰딩', '어쩌구', '저쩌구'];
   const materialList = [
     {pattern: '몰딩', coating: 1, name: '벽지', imageUrl: mockImg},
@@ -21,6 +23,7 @@ const MaterialList = () => {
   };
   return(
     <div className={styles.materialListWrapper}>
+      
       <div className={styles.btnField}>
         {types.map(type =>(
           <BtnPrimary key={type}>{type}</BtnPrimary>

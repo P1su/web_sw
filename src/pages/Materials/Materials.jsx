@@ -5,7 +5,7 @@ import MaterialList from './../../components/Material/MaterialList/MaterialList'
 const Materials = () => {
   return(
     <div className={styles.materialsPageWrapper}>
-      <Title>자재</Title>
+      <Title>FILMS</Title>
       <MaterialList />
     </div>
   );
