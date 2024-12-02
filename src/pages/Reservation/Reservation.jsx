@@ -11,8 +11,8 @@ const Reservation = () => {
       <h2 className={styles.titleText}>견적 문의하기</h2>
       <p className={styles.text}>
         문의하실 내용을 작성해주세요 <br />
-        실제 상담시 변경될 수 있습니다. <br />
-        보다 정확한 상담을 위하여 사진을 첨부해주세요. <br />
+        실제 상담시 변경될 수 있습니다 <br />
+        보다 정확한 상담을 위하여 사진을 첨부해주세요 <br />
       </p>
       <hr className={styles.hr}/>
       <article className={styles.article}>

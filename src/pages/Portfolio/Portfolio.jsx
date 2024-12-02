@@ -7,8 +7,11 @@ const Portfolio = () => {
     <div className={styles.pageWrapper}>
       <Title>Portfolio</Title>
       <section>
-        <h3>포트폴리오</h3>
-        <p>항상 최선을 다합니다 어쩌구 저쩌구</p>
+        <h2 className={styles.titleText}>시공 내역</h2>
+        <p className={styles.text}>
+          실제 시공 모습들을 확인해보세요<br />
+        </p>
+        <hr className={styles.hr}/>
       </section>
       <section>
         <PortfolioList />
