@@ -12,6 +12,7 @@ import ReservationDetail from '../pages/Reservation/ReservationDetail/Reservatio
 import Event from '../pages/Event/Event';
 import Portfolio from '../pages/Portfolio/Portfolio';
 import PortfolioDetail from '../pages/Portfolio/Detail/PortfolioDetail';
+import ReservationBoard from '../pages/Reservation/ReservationBoard/ReservationBoard';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: '/reservation',
         element: <Reservation />,
+      },
+      {
+        path: '/reservation-board',
+        element: <ReservationBoard />
       },
       {
         path: '/reservation/:id',

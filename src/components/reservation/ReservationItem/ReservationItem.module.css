@@ -1,5 +1,5 @@
 .reservationItemWrapper {
-  width: 100rem;
+  width: 125rem;
 }
 .textArea {
   width: 100%;
@@ -12,7 +12,7 @@
   text-align: left;
   color: var(--B1, #3e3e3e);
   font-family: Pretendard;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -20,11 +20,11 @@
 .titleText {
   display: flex;
   align-items: center;
-  width: 55rem;
+  width: 85rem;
   text-align: left;
   color: #000;
   font-family: Pretendard;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -35,7 +35,7 @@
   text-align: left;
   color: var(--B1, #3e3e3e);
   font-family: Pretendard;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;

@@ -4,7 +4,13 @@ import Input from '../../components/forms/input/Input';
 import ImageInput from '../../components/forms/image/ImageInput';
 import Textarea from '../../components/forms/textarea/Textarea';
 import BtnSmall from '../../components/buttons/Small/BtnSmall';
+import { useNavigate } from 'react-router-dom';
 const Reservation = () => {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate('/reservation-board');
+  };
+
   return(
     <div className={styles.pageWrapper}>
       <Title>Reservation</Title>
@@ -14,6 +20,7 @@ const Reservation = () => {
         실제 상담시 변경될 수 있습니다 <br />
         보다 정확한 상담을 위하여 사진을 첨부해주세요 <br />
       </p>
+      <span className={styles.span} onClick={() => handleNavigate()}>게시판 바로가기</span>
       <hr className={styles.hr}/>
       <article className={styles.article}>
         <Input title='성명' placeholder='홍길동'/>

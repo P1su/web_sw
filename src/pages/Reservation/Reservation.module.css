@@ -5,6 +5,16 @@
   justify-content: center;
   align-items: center;
 }
+.span {
+  color: #3e3e3e;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
 .hr {
   display: block;
   width: 125rem;
