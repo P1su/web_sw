@@ -12,7 +12,7 @@ import MyCalendar from '../../components/Calendar/MyCalendar';
 const Main = () => {
   return(
     <div className={styles.mainWrapper}>
-      <Title>메인페이지</Title>
+      <Title>e끌림인테리어필름</Title>
       <BtnLarge isFilled={false}>큰 버튼</BtnLarge>
       <BtnLarge isFilled={true}>큰 버튼</BtnLarge>
       <BtnSmall isFilled={false}>작은 버튼</BtnSmall>
