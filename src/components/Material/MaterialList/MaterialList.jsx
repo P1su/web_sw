@@ -5,10 +5,14 @@ import styles from './MaterialList.module.css';
 import { useNavigate } from 'react-router-dom';
 import mockImg from '../../../assets/img/mockItem.png';
 import { useState } from 'react';
+import useGetMaterialList from '../../../hooks/queries/material/useGetMaterialList';
 
 const MaterialList = () => {
   const navigate = useNavigate();
   const [company, setComapny] = useState('lx');
+  console.log(company)
+  const { data } = useGetMaterialList(company);
+  console.log(data);
   const handleActive = () => {
     setComapny(company === 'lx'? 'hyundai' : 'lx');
   }
