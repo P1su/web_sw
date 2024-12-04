@@ -2,18 +2,20 @@ import styles from './PortfolioDetail.module.css';
 import { useParams } from 'react-router-dom';
 import mockImage from '../../../assets/img/mockItem.png';
 import Title from '../../../components/Title/Title';
+import useGetPortfolioDetail from '../../../hooks/queries/portfolio/useGetPortfolioDetail';
 
 const PortfolioDetail = () => {
-  const { id } = useParams('portfolioId');
-  //id 로 api 연결 데이터 받아옴
-  console.log(id);
+  const { portfolioId } = useParams('portfolioId');
+  const { data } = useGetPortfolioDetail(portfolioId);
+  console.log(data);
   
   const images = [mockImage, mockImage, mockImage];
 
   return(
     <div className={styles.pageWrapper}>
       <Title>Portfolio</Title>
-      <h2 className={styles.titleText}>제목</h2>
+      <h2 className={styles.titleText}>{data.title}</h2>
+      <p>{data.content}</p>
       <hr className={styles.hr}/>
       <section className={styles.bodySection}>
         <article className={styles.article}>

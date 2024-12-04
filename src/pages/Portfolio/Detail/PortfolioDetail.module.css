@@ -1,6 +1,14 @@
 .pageWrapper {
   width: 100%;
 }
+.p {
+  color: #121212;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 .hr {
   width: 70%;
   border: 1px solid #d3d3d3;
