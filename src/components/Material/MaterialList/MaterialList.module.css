@@ -1,5 +1,5 @@
 .materialListWrapper {
-  width: 100%;
+  width: 125rem;
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -15,4 +15,18 @@
   display: flex;
   justify-content: center;
   gap: 4rem;
+}
+.company {
+  color: #5e5e5e;
+  font-family: Pretendard;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.active {
+  color: #111111;
+}
+.unactive {
+  cursor: pointer;
 }

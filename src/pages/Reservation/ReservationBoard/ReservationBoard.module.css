@@ -1,9 +1,13 @@
-.mainWrapper {
+.pageWrapper {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .hr {
   display: block;
-  width: 100%;
+  width: 125rem;
   margin-bottom: 2rem;
 }
 .titleText {
@@ -24,4 +28,14 @@
   line-height: normal;
   letter-spacing: -0.5px;
   padding-bottom: 5rem;
+}
+.span {
+  color: #3e3e3e;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 1rem;
+  cursor: pointer;
 }
