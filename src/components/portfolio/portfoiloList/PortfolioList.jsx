@@ -1,4 +1,3 @@
-import Title from '../../Title/Title';
 import PortfolioItem from '../portfolioItem/PortfolioItem';
 import styles from './PortfolioList.module.css';
 
