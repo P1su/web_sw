@@ -1,12 +1,14 @@
 .pageWrapper {
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 2rem;
 }
 .reservationImage {
-  width: 100rem;
-  height: 100rem;
+  width: 50rem;
+  height: 50rem;
 }
 .reservationContent {
   width: 100%;
@@ -17,4 +19,11 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.body {
+  width: 125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

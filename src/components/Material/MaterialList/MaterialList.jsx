@@ -4,9 +4,14 @@ import Search from '../../forms/search/Search';
 import styles from './MaterialList.module.css';
 import { useNavigate } from 'react-router-dom';
 import mockImg from '../../../assets/img/mockItem.png';
+import { useState } from 'react';
 
 const MaterialList = () => {
   const navigate = useNavigate();
+  const [company, setComapny] = useState('lx');
+  const handleActive = () => {
+    setComapny(company === 'lx'? 'hyundai' : 'lx');
+  }
   const types = ['자재', '벽지', '몰딩', '어쩌구', '저쩌구'];
   const materialList = [
     {pattern: '몰딩', coating: 1, name: '벽지', imageUrl: mockImg},
@@ -21,6 +26,11 @@ const MaterialList = () => {
   };
   return(
     <div className={styles.materialListWrapper}>
+      <div className={styles.company}>
+        <span className={`${company === 'lx' ? styles.active : styles.unactive}`} onClick={() => handleActive()}>Lx Z:IN </span>
+        |  
+        <span className={`${company === 'hyundai' ? styles.active : styles.unactive}`} onClick={() => handleActive()}> HYUNDAI</span>
+      </div>
       <div className={styles.btnField}>
         {types.map(type =>(
           <BtnPrimary key={type}>{type}</BtnPrimary>
