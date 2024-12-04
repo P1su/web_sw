@@ -60,3 +60,8 @@
   display: flex;
   justify-content: flex-end;
 }
+.inputDiv {
+  width: 100%;
+  display: flex;
+  gap: 4rem;
+}

@@ -23,12 +23,21 @@ const Reservation = () => {
       <span className={styles.span} onClick={() => handleNavigate()}>게시판 바로가기</span>
       <hr className={styles.hr}/>
       <article className={styles.article}>
+        <div className={styles.inputDiv}>
         <Input title='성명' placeholder='홍길동'/>
         <Input title='연락처' placeholder='010-xxxx-xxxx'/>
         <Input title='이메일' placeholder='email@email.com'/>
-        <Input title='상담 날짜' placeholder='YYYY-MM-DD'/>
-        <Input title='제목' placeholder='제목을 입력해주세요'/>
-        <Input title='게시글 비밀번호' placeholder='비밀번호를 입력해주세요'/>
+        </div>
+        <div className={styles.inputDiv}>
+        <Input title='시공 희망 날짜' placeholder='YYYY-MM-DD'/>
+        <Input title='완공 희망 날짜' placeholder='YYYY-MM-DD'/>
+        <Input title='상담 희망 날짜' placeholder='YYYY-MM-DD'/>
+        </div>
+        <div className={styles.inputDiv}>
+        <Input title='주소' placeholder='시공 장소'/>
+        <Input title='희망 견적' placeholder='100000'/>
+        <Input title='상담 희망 날짜' placeholder='YYYY-MM-DD'/>
+        </div>
         <section className={styles.imageSection}>
           <ImageInput />
           <ImageInput />
