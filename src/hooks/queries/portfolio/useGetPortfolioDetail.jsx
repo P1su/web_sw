@@ -9,7 +9,7 @@ const getPortfolioDetail = async (portfolioId) => {
 };
 
 const useGetPortfolioDetail = (id) => {
-  const { data } = useQuery({
+  const { data, isLoading } = useQuery({
     queryKey: PORTFOLIODETAIL_QUERY_KEY,
     queryFn: () => getPortfolioDetail(id),
     retry: 0,
@@ -18,7 +18,7 @@ const useGetPortfolioDetail = (id) => {
     },
   });
 
-  return { data };
+  return { data, isLoading };
 };
 
 export default useGetPortfolioDetail;

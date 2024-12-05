@@ -6,8 +6,11 @@ import useGetPortfolioDetail from '../../../hooks/queries/portfolio/useGetPortfo
 
 const PortfolioDetail = () => {
   const { portfolioId } = useParams('portfolioId');
-  const { data } = useGetPortfolioDetail(portfolioId);
+  const { data, isLoading } = useGetPortfolioDetail(portfolioId);
   console.log(data);
+  if (isLoading) {
+    return <div>로딩 중...</div>;
+  }
   
   const images = [mockImage, mockImage, mockImage];
 
