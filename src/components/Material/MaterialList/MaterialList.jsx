@@ -40,7 +40,7 @@ const MaterialList = () => {
   const currentPageData = filteredData.slice(page * itemsPerPage, (page + 1) * itemsPerPage);
 
   const handleClick = (name) => {
-    navigate(`/material/${name}`);
+    navigate(`/material/${company}/${name}`);
   };
 
   return(
