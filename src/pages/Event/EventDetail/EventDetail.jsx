@@ -1,9 +1,13 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import styles from './EventDetail.module.css';
 import Title from '../../../components/Title/Title';
 import BtnSmall from '../../../components/buttons/Small/BtnSmall';
+import useGetEventItem from '../../../hooks/queries/event/useGetEventItem';
 
 const EventDetail = () => {
+  const { id } = useParams('id');
+  const { data } = useGetEventItem(id);
+  console.log(data);
   const navigate = useNavigate();
   const handleNavigate = () => {
     navigate('/event');

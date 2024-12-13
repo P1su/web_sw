@@ -2,8 +2,11 @@ import styles from './EventList.module.css';
 import ReservationItem from './../../reservation/ReservationItem/ReservationItem';
 import EventItem from '../EventItem/EventItem';
 import { useNavigate } from 'react-router-dom';
+import useGetEventList from '../../../hooks/queries/event/useGetEventList';
 
 const EventList = () => {
+  const { data } = useGetEventList();
+  console.log(data);
   const mockList = [
     {
       date: '12월 1일',
