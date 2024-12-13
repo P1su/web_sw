@@ -7,7 +7,8 @@ const MaterialItem = ({ itemValue, onClick, width, height }) => {
       <div className={styles.itemBox}>
         <p className={styles.pattern}>{itemValue?.pattern}</p>
         <p className={styles.coating}>{itemValue?.coating}</p>
-        <p className={styles.name}>{itemValue?.name}</p>
+        <p className={styles.coating}>{itemValue?.category}</p>
+        <p className={styles.name}>{itemValue?.product_name}</p>
       </div>
     </div>
   );

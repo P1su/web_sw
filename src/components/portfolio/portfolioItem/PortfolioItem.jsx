@@ -1,5 +1,4 @@
 import styles from './PortfolioItem.module.css';
-import mockImg from '../../../assets/img/mockItem.png';
 import { useNavigate } from 'react-router-dom';
 
 const PortfolioItem = ({ imageUrl, title, id }) => {
@@ -7,10 +6,11 @@ const PortfolioItem = ({ imageUrl, title, id }) => {
   const handleNavigate = () => {
     navigate(`/portfolio/${id}`);
   }
+  console.log(imageUrl)
 
   return(
     <div className={styles.wrapper} onClick={() => handleNavigate()}>
-      <img src={mockImg} className={styles.previewImage}/>
+      <img src={imageUrl} className={styles.previewImage}/>
       <p className={styles.titleText}>{title}</p>
     </div>
   );
