@@ -11,13 +11,8 @@ import usePostPassword from '../../../hooks/queries/reservation/usePostPassword'
 
 const ReservationList = () => {
   const { data } = useGetReservationList();
+  console.log(data);
   const mockList = [
-    {
-      date: '11월 1일',
-      title: '시공 신청합니다.',
-      name: '송아무개',
-      id: 0,
-    },
     {
       date: '11월 1일',
       title: '시공 신청합니다.',
@@ -42,9 +37,15 @@ const ReservationList = () => {
       name: '송아무개',
       id: 4,
     },
+    {
+      date: '11월 1일',
+      title: '시공 신청합니다.',
+      name: '송아무개',
+      id: 5,
+    },
   ];
   const [isOpen, openModal, closeModal] = useModal();
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState({password: '',});
   const [id, setId] = useState(0);
   const { mutate: postPassword } = usePostPassword();
   const navigate = useNavigate();
@@ -62,7 +63,8 @@ const ReservationList = () => {
       onError: () => {
         alert('비밀번호가 일치하지 않습니다.');
       },
-    })
+    });
+    setPassword({ password: '', });
   }
   const handleModal = (id) => {
     openModal();
@@ -73,7 +75,7 @@ const ReservationList = () => {
       {
         isOpen && (
           <Modal closeModal={closeModal}>
-            <Input title='비밀번호 입력' placeholder='비밀번호' value={password} setValue={setPassword} name='password'/>
+            <Input title='비밀번호 입력' placeholder='비밀번호' value={password.password} setValue={setPassword} name='password' />
             <BtnSmall onClick={handlePassword}>제출하기</BtnSmall>
           </Modal>
         )
