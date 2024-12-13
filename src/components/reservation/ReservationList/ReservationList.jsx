@@ -1,8 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import ReservationItem from '../ReservationItem/ReservationItem';
 import styles from './ReservationList.module.css';
+import useGetReservationList from '../../../hooks/queries/reservation/useGetReservationList';
 
 const ReservationList = () => {
+  const { data } = useGetReservationList();
   const mockList = [
     {
       date: '11월 1일',

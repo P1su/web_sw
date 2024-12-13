@@ -4,11 +4,12 @@ import styles from './ReservationDetail.module.css';
 import InfoBox from '../../../components/InfoBox/InfoBox';
 import mockImage from '../../../assets/img/mockItem.png';
 import BtnLarge from '../../../components/buttons/Large/BtnLarge';
+import useGetReservationDetail from '../../../hooks/queries/reservation/useGetReservationDetail';
 
 //get으로 데이터 받아오면 배열에 집어넣고 map 으로 반복 처리
 const ReservationDetail = () => {
-  const reservationId = useParams('id');
-  console.log(reservationId);
+  const { id } = useParams('id');
+  const { data } = useGetReservationDetail(id);
   const navigate = useNavigate();
   const handleNavigate = () => {
     navigate('/reservation-board');
