@@ -46,6 +46,8 @@ jobs:
 
           API_TOKEN_GITHUB: ${{ secrets.AUTO_ACTIONS }}
 
+          SSH_DEPLOY_KEY: $
+
         with:
 
           source-directory: 'output'
