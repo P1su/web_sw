@@ -24,7 +24,7 @@ const MaterialDetail = () => {
   return(
     <div className={styles.materialDetailPageWrapper}>
       <Title>{item.name}</Title>
-      <img src={item.imageUrl} className={styles.materialDetailImage}/>
+      <img src={data?.image_url} className={styles.materialDetailImage}/>
       <p className={styles.infoTextSpan}>{`패턴: ${item.pattern}`}</p>
       <p className={styles.infoTextSpan}>{`코팅: ${item.coating}`}</p>
       <div className={styles.buttonField}>
