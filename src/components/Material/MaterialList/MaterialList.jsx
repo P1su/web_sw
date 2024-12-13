@@ -6,7 +6,8 @@ import { useState } from 'react';
 import useGetMaterialList from '../../../hooks/queries/material/useGetMaterialList';
 import { lxTypes, patterns, coatings } from '../../../utils/materialTypes';
 
-const MaterialList = () => {
+const MaterialList = ({ setCompare, isCompare=false, closeModal }) => {
+  console.log(isCompare)
   const navigate = useNavigate();
   const [company, setComapny] = useState('lx');
   const [filter, setFilter] = useState('');
@@ -40,7 +41,16 @@ const MaterialList = () => {
   const currentPageData = filteredData.slice(page * itemsPerPage, (page + 1) * itemsPerPage);
 
   const handleClick = (name) => {
-    navigate(`/material/${company}/${name}`);
+    if(isCompare){
+      setCompare((prevValues) => ({
+        ...prevValues,
+        company: company,
+        name: name,
+      }));
+      closeModal();
+    } else{
+      navigate(`/material/${company}/${name}`);
+    }
   };
 
   return(

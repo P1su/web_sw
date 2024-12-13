@@ -9,6 +9,22 @@
   height: 50rem;
   padding-bottom: 5rem;
 }
+.nameText {
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 2rem;
+}
+.categoryText {
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 2rem;
+}
 .infoTextSpan {
   font-family: Pretendard;
   font-size: 20px;

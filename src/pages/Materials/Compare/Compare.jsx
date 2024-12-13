@@ -3,32 +3,23 @@ import Title from './../../../components/Title/Title';
 import { useLocation, useNavigate } from 'react-router-dom';
 import MaterialItem from './../../../components/Material/MaterialItem/MaterialItem';
 import { useState } from 'react';
-import mock2 from '../../../assets/img/mockItem.png'
 import BtnSmall from '../../../components/buttons/Small/BtnSmall';
-import addImg from '../../../assets/img/addImage.png';
 import IcPlus from '../../../assets/svg/IcPlus';
 import useModal from '../../../hooks/common/useModal';
 import Modal from '../../../components/Modal/Modal';
 import MaterialList from './../../../components/Material/MaterialList/MaterialList';
+import useGetMaterialItem from '../../../hooks/queries/material/useGetMaterialItem';
 
 const Compare = () => {
   const navigate = useNavigate();
-  const initialValue = {
-    pattern: '',
-    coating: '',
-    name: '',
-    imageUrl: '',
-  };
-
-  //클릭 이벤트로 API 연결해서 받아옴
   const location = useLocation();
   const item = location.state;
-  const handleGetItem = () => {
-    alert('API 연결');
-  };
-  const [compaerItem, setCompareItem] = useState(initialValue);
+  const [compare, setCompare] = useState({
+    company:'',
+    name:'',
+  });
   const [isOpen, openModal, closeModal] = useModal();
-
+  const { data, isError } = useGetMaterialItem(compare.name, compare.company);
   const handlePrev = () => {
     navigate('/materials');
   }
@@ -37,16 +28,16 @@ const Compare = () => {
       {
         isOpen && 
         <Modal closeModal={closeModal}>
-          <MaterialList />
+          <MaterialList setCompare={setCompare} isCompare={true} closeModal={closeModal}/>
         </Modal>
       }
-      <Title>자재 비교</Title>
+      <Title>Films</Title>
       <div className={styles.compareBox}>
         <MaterialItem itemValue={item} width='40rem' height='40rem'/>
         <div>
           {
-            compaerItem !== initialValue ? 
-              <MaterialItem itemValue={compaerItem} width='40rem' height='40rem'/>
+            isError === false  ? 
+              <MaterialItem itemValue={data} width='40rem' height='40rem' onClick={() => openModal()}/>
             :
               <div className={styles.emptyItem} onClick={() => openModal()}>
                 <IcPlus />

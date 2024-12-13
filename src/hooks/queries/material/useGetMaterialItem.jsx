@@ -9,7 +9,7 @@ const getMaterialItem = async (name, company) => {
 };
 
 const useGetMaterialItem = (name, company) => {
-  const { data } = useQuery({
+  const { data, isError } = useQuery({
     queryKey: [MATERIALITEM_QUERY_KEY, name, company],
     queryFn: () => getMaterialItem(name, company),
     retry: 0,
@@ -18,7 +18,7 @@ const useGetMaterialItem = (name, company) => {
     }
   });
 
-  return { data };
+  return { data, isError };
 };
 
 export default useGetMaterialItem;
