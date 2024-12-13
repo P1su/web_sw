@@ -1,11 +1,14 @@
 import styles from './EventItem.module.css';
 
-const EventItem = () => {
+const EventItem = ({ date, title, onClick }) => {
   return (
-    <div className={styles.eventItemWrapper}>
-      <img className={styles.img}/>
-      <p className={styles.title}>12월 이벤트</p>
-      <span>2024.12.31</span>
+    <div className={styles.eventItmeWrapper} onClick={() => onClick()}>
+      <div className={styles.textArea}>
+        <p className={styles.dateText}>{date}</p>
+        <p className={styles.titleText}>{title}</p>
+        <p className={styles.nameText}>확인하러가기 →</p>
+      </div>
+      <hr />
     </div>
   );
 };

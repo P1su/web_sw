@@ -1,4 +1,4 @@
-import EventItem from '../../components/Event/EventItem/EventItem';
+import EventList from '../../components/Event/EventList/EventList';
 import Title from '../../components/Title/Title';
 import styles from './Event.module.css';
 
@@ -13,7 +13,7 @@ const Event = () => {
         </p>
         <hr className={styles.hr}/>
       </section>
-      <EventItem />
+      <EventList />
     </div>
   );
 };

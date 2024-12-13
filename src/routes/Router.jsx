@@ -10,6 +10,7 @@ import WriteEstimate from '../pages/Estimate/WriteEstimate/WriteEstimate';
 import Reservation from '../pages/Reservation/Reservation';
 import ReservationDetail from '../pages/Reservation/ReservationDetail/ReservationDetail';
 import Event from '../pages/Event/Event';
+import EventDetail from '../pages/Event/EventDetail/EventDetail';
 import Portfolio from '../pages/Portfolio/Portfolio';
 import PortfolioDetail from '../pages/Portfolio/Detail/PortfolioDetail';
 import ReservationBoard from '../pages/Reservation/ReservationBoard/ReservationBoard';
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
       {
         path: '/event',
         element: <Event />,
+      },
+      {
+        path: '/event/:id',
+        element: <EventDetail />,
       },
       {
         path: '/portfolio',
