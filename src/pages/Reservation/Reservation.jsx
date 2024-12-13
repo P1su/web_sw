@@ -14,6 +14,7 @@ const Reservation = () => {
     navigate('/reservation-board');
   };
   const [values, setValues] = useState({
+    title: '',
     name: '',
     contact: '',
     email: '',
@@ -58,6 +59,13 @@ const Reservation = () => {
       <hr className={styles.hr}/>
       <article className={styles.article}>
         <div className={styles.inputDiv}>
+          <Input 
+            title='제목' 
+            placeholder='제목을 입력해주세요' 
+            value={values.title}
+            setValue={setValues}
+            name='title'
+          />
           <Input 
             title='성명' 
             placeholder='홍길동' 
