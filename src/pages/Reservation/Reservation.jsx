@@ -5,11 +5,46 @@ import ImageInput from '../../components/forms/image/ImageInput';
 import Textarea from '../../components/forms/textarea/Textarea';
 import BtnSmall from '../../components/buttons/Small/BtnSmall';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import usePostReservation from '../../hooks/queries/reservation/usePostReservation';
 const Reservation = () => {
   const navigate = useNavigate();
+  const { mutate: postReservation }= usePostReservation();
   const handleNavigate = () => {
     navigate('/reservation-board');
   };
+  const [values, setValues] = useState({
+    title: '',
+    name: '',
+    contact: '',
+    email: '',
+    startDate: '',
+    endDate: '',
+    password: '',
+    address: '',
+    area: '',
+    budget: '',
+    content: '',
+    file: '',
+  });
+  console.log(values);
+  const handleChange = (e) => {
+    setValues((prevValues) => ({
+      ...prevValues,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handlePost = () => {
+    postReservation(values, {
+      onSuccess: () => {
+        alert('예약이 성공적으로 접수되었습니다.');
+      },
+      onError: (error) => {
+        console.error(error);
+      },
+    });
+  }
 
   return(
     <div className={styles.pageWrapper}>
@@ -24,42 +59,103 @@ const Reservation = () => {
       <hr className={styles.hr}/>
       <article className={styles.article}>
         <div className={styles.inputDiv}>
-        <Input title='성명' placeholder='홍길동'/>
-        <Input title='연락처' placeholder='010-xxxx-xxxx'/>
-        <Input title='이메일' placeholder='email@email.com'/>
+          <Input 
+            title='제목' 
+            placeholder='제목을 입력해주세요' 
+            value={values.title}
+            setValue={setValues}
+            name='title'
+          />
+          <Input 
+            title='성명' 
+            placeholder='홍길동' 
+            value={values.name}
+            setValue={setValues}
+            name='name'
+          />
+          <Input 
+            title='연락처' 
+            placeholder='010-xxxx-xxxx' 
+            value={values.contact}
+            setValue={setValues}
+            name='contact'
+          />
+          <Input 
+            title='이메일' 
+            placeholder='email@email.com'
+            setValue={setValues}
+            value={values.email}
+            name='email' 
+          />
         </div>
         <div className={styles.inputDiv}>
-        <Input title='시공 희망 날짜' placeholder='YYYY-MM-DD'/>
-        <Input title='완공 희망 날짜' placeholder='YYYY-MM-DD'/>
+          <input 
+            title='시공 희망 날짜' 
+            placeholder='YYYY-MM-DD' 
+            onChange={handleChange}
+            value={values.startDate}
+            name='startDate'
+            type='date'
+          />
+          <input 
+            title='완공 희망 날짜' 
+            placeholder='YYYY-MM-DD'
+            onChange={handleChange}
+            value={values.endDate}
+            name='endDate' 
+            type='date'
+          />
+          <Input 
+            title='주소' 
+            placeholder='시공 장소' 
+            setValue={setValues}
+            value={values.address}
+            name='address'
+          />
         </div>
         <div className={styles.inputDiv}>
-        <Input title='주소' placeholder='시공 장소'/>
-        <Input title='희망 견적' placeholder='100000'/>
-        <Input title='게시글 비밀번호' placeholder='100000'/>
+          <Input 
+            title='평수' 
+            placeholder='100000' 
+            setValue={setValues}
+            value={values.area}
+            name='area'
+          />
+          <Input 
+            title='예상 견적' 
+            placeholder='100000' 
+            setValue={setValues}
+            value={values.budget}
+            name='budget'
+          />
+          <Input 
+            title='게시글 비밀번호' 
+            placeholder='100000' 
+            setValue={setValues}
+            value={values.password}
+            name='password'
+          />
         </div>
         <section className={styles.imageSection}>
-          <ImageInput />
+          <ImageInput setValues={setValues} />
           <ImageInput />
           <ImageInput />
           <ImageInput />
         </section>
-        <Textarea title='시공부위' placeholder='ex)방문.틀 6셋트(방3, 화장실2, 거실터닝도어1)
-
-샷시창.틀 확장형 5셋트 이중창 전체(방3, 거실1, 주방1)
-
-걸레받이전체
-
-현관문(내부만)
-
-주방전체(싱크대상부장,하부장, 아일랜드, 냉장고장, 주방팬트리장)
-
-작은방붙박이장
-
-입구방붙박이장
-
-안방드레스룸붙박이장, 화장대'/>
+          <Textarea title='시공부위' placeholder='ex)방문.틀 6셋트(방3, 화장실2, 거실터닝도어1)
+            샷시창.틀 확장형 5셋트 이중창 전체(방3, 거실1, 주방1)
+            걸레받이전체
+            현관문(내부만)
+            주방전체(싱크대상부장,하부장, 아일랜드, 냉장고장, 주방팬트리장)
+            작은방붙박이장
+            입구방붙박이장
+            안방드레스룸붙박이장, 화장대'
+            value={values.content}
+            setValue={setValues}
+            name='content'
+          />
         <div className={styles.buttonField}>
-          <BtnSmall>문의 제출하기</BtnSmall>
+          <BtnSmall onClick={handlePost}>문의 제출하기</BtnSmall>
         </div>
       </article>
     </div>

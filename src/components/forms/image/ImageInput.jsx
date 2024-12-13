@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './ImageInput.module.css';
 import addImage from '../../../assets/img/addImage.png';
-const ImageInput = () => {
+const ImageInput = ({setValues}) => {
   const [imgUrl, setImgUrl] = useState('');
 
   const handleImageChange = (event) => {
@@ -9,14 +9,14 @@ const ImageInput = () => {
     
     if (file) {
       const reader = new FileReader();
-      
-      // 파일 읽기를 완료했을 때 호출되는 콜백 함수
       reader.onloadend = () => {
-        setImgUrl(reader.result); // 이미지를 base64 형식으로 상태에 저장
+        setImgUrl(reader.result);
       };
-      
-      // 파일을 base64 데이터로 읽기 시작
       reader.readAsDataURL(file);
+      setValues((prevValues) => ({
+        ...prevValues,
+        file: file,
+      }));
     }
   };
 
