@@ -31,12 +31,11 @@ const Reservation = () => {
         <div className={styles.inputDiv}>
         <Input title='시공 희망 날짜' placeholder='YYYY-MM-DD'/>
         <Input title='완공 희망 날짜' placeholder='YYYY-MM-DD'/>
-        <Input title='상담 희망 날짜' placeholder='YYYY-MM-DD'/>
         </div>
         <div className={styles.inputDiv}>
         <Input title='주소' placeholder='시공 장소'/>
         <Input title='희망 견적' placeholder='100000'/>
-        <Input title='상담 희망 날짜' placeholder='YYYY-MM-DD'/>
+        <Input title='게시글 비밀번호' placeholder='100000'/>
         </div>
         <section className={styles.imageSection}>
           <ImageInput />
@@ -44,7 +43,21 @@ const Reservation = () => {
           <ImageInput />
           <ImageInput />
         </section>
-        <Textarea title='내용' placeholder='문의 내용을 입력해주세요'/>
+        <Textarea title='시공부위' placeholder='ex)방문.틀 6셋트(방3, 화장실2, 거실터닝도어1)
+
+샷시창.틀 확장형 5셋트 이중창 전체(방3, 거실1, 주방1)
+
+걸레받이전체
+
+현관문(내부만)
+
+주방전체(싱크대상부장,하부장, 아일랜드, 냉장고장, 주방팬트리장)
+
+작은방붙박이장
+
+입구방붙박이장
+
+안방드레스룸붙박이장, 화장대'/>
         <div className={styles.buttonField}>
           <BtnSmall>문의 제출하기</BtnSmall>
         </div>
