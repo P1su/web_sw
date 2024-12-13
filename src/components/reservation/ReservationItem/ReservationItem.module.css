@@ -1,0 +1,42 @@
+.reservationItemWrapper {
+  width: 125rem;
+}
+.textArea {
+  width: 100%;
+  display: flex;
+}
+.dateText {
+  display: flex;
+  align-items: center;
+  width: 30rem;
+  text-align: left;
+  color: var(--B1, #3e3e3e);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.titleText {
+  display: flex;
+  align-items: center;
+  width: 85rem;
+  text-align: left;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.nameText {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  color: var(--B1, #3e3e3e);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

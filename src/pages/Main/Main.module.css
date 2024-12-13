@@ -1,5 +1,27 @@
-.test {
-  font-family: 'Pretendard';
-  font-size: 30px;
-  font-weight: 900;
+.mainWrapper {
+  width: 100%;
+}
+.hr {
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.titleText {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 7rem 0 2rem 0;
+}
+.text {
+  color: #3e3e3e;
+  font-family: Pretendard;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  padding-bottom: 5rem;
 }

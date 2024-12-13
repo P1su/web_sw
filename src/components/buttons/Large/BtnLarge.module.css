@@ -1,0 +1,27 @@
+.btnLargeDefault {
+  width: 40rem;
+  height: 5rem;
+  border-radius: 30px;
+  border: 2px solid #3c3c3c;
+  background-color: #ffffff;
+  font-family: 'Pretendard';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #3c3c3c;
+}
+
+.btnLargeFilled {
+  width: 40rem;
+  height: 5rem;
+  border-radius: 30px;
+  border: none;
+  background-color: #3c3c3c;
+  font-family: 'Pretendard';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #ffffff;
+}

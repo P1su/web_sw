@@ -1,0 +1,19 @@
+.estimatePageWrapper {
+  width: 100%;
+  display: flex;
+  color: #ffffff;
+  font-family: Pretendard;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.typeBox {
+  width: 50%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  filter: brightness(30%);
+}

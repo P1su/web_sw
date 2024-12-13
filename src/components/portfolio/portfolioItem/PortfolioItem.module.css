@@ -1,0 +1,15 @@
+.wrapper {
+  width: 50rem;
+}
+.previewImage {
+  width: 50rem;
+  height: 48rem;
+}
+.titleText {
+  color: #121212;
+  font-family: Pretendard;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

@@ -1,0 +1,16 @@
+.searchInput {
+  width: 98%;
+  border-radius: 10px;
+  border: 2px solid var(--B1, #3e3e3e);
+  background: #fff;
+  height: 6rem;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 2rem;
+}
+.searchInput::placeholder {
+  color: #a9a9a9;
+}

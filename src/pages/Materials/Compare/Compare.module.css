@@ -1,0 +1,37 @@
+.comparePageWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.compareBox {
+  width: 100rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 6rem;
+}
+.addImg {
+  width: 40rem;
+  height: 40rem;
+}
+.selectBox {
+  display: none;
+}
+.emptyItem {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  height: 36rem;
+  gap: 4rem;
+  padding-top: 4rem;
+  background-color: #f5f5f5;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--placeholder, #bebebe);
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

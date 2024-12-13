@@ -1,0 +1,29 @@
+.pageWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.reservationImage {
+  width: 50rem;
+  height: 50rem;
+}
+.reservationContent {
+  width: 100%;
+  text-align: left;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.body {
+  width: 125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
