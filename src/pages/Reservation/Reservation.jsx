@@ -27,7 +27,6 @@ const Reservation = () => {
     content: '',
     images: '',
   });
-  console.log(values);
   const handleChange = (e) => {
     setValues((prevValues) => ({
       ...prevValues,
@@ -39,6 +38,7 @@ const Reservation = () => {
     postReservation(values, {
       onSuccess: () => {
         alert('예약이 성공적으로 접수되었습니다.');
+        navigate('/reservation-board');
       },
       onError: (error) => {
         console.error(error);
