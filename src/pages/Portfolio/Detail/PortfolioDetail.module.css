@@ -63,6 +63,7 @@
   line-height: normal;
 
   cursor: pointer;
+  text-decoration: none;
 }
 .linkSection {
   padding-bottom: 2rem;
