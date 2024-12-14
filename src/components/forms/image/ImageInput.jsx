@@ -15,7 +15,7 @@ const ImageInput = ({setValues}) => {
       reader.readAsDataURL(file);
       setValues((prevValues) => ({
         ...prevValues,
-        file: file,
+        images: file,
       }));
     }
   };

@@ -4,7 +4,7 @@ import { instance } from '../../../apis/instance'
 const postReservation = async (values) => {
   const formData = new FormData();
   for (const key in values) {
-    formData.append(key, values[key]);
+    key === 'budget' ? formData.append(key, Number(values[key])) : formData.append(key, values[key]);
   }
   const res = await instance.post(`/consultation`, formData, {
     headers: {

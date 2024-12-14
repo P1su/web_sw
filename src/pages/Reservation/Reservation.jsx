@@ -25,7 +25,7 @@ const Reservation = () => {
     area: '',
     budget: '',
     content: '',
-    file: '',
+    images: '',
   });
   console.log(values);
   const handleChange = (e) => {
