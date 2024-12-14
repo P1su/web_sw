@@ -5,7 +5,8 @@ const postPassword = async (params) => {
   const body = {
     'password': params.password,
   };
-  const res = await instance.post(`/consultation/${params.id}/verify-password`, body);
+  console.log(body);
+  const res = await instance.post(`/consultation/${params.id}/verify-password`, params.password);
   return res.data;
 }
 
