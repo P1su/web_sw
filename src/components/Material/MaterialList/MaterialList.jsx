@@ -18,12 +18,11 @@ const MaterialList = ({ setCompare, isCompare=false, closeModal }) => {
   const handleActive = () => {
     setComapny(company === 'lx'? 'hyundai' : 'lx');
     setPage(0);
+    setFilter('');
   };
   const handleFilter = (value) => {
     filter === value ? setFilter('') : setFilter(value);
     setPage(0);
-
-    
   };
   const handlePageChange = (newPage) => {
     setPage(newPage);
@@ -104,7 +103,13 @@ const MaterialList = ({ setCompare, isCompare=false, closeModal }) => {
       <Search placeholder='원하시는 자재를 검색하세요'/>
       <div className={styles.listBox}>
         {currentPageData.map((materialItem) => (
-          <MaterialItem key={materialItem.product_name} itemValue={materialItem} onClick={() => handleClick(materialItem.product_name)}/>
+          <MaterialItem 
+            key={materialItem.product_name} 
+            itemValue={materialItem} 
+            width='29.7rem'
+            height='29.7rem'
+            onClick={() => handleClick(materialItem.product_name)}
+          />
         ))}
       </div>
       <div className={styles.pagination}>
