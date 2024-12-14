@@ -22,7 +22,7 @@ const EventList = () => {
     <div className={styles.eventListWrapper}>
       <ReservationItem date='게시일' title='제목' />
       {
-        data.map((item) => (
+        data?.map((item) => (
           <EventItem
             key={item.id}
             date={formattedDate(item.event_date)}
