@@ -7,7 +7,7 @@ function App() {
   const queryClient = new QueryClient();
   return (
     <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} future={{ v7_startTransition: true }}/>
+      <RouterProvider router={router} future={{ v7_startTransition: true }} />
     </QueryClientProvider>
   )
 }
