@@ -19,6 +19,7 @@ const MaterialDetail = () => {
     <div className={styles.materialDetailPageWrapper}>
       <Title>Films</Title>
       <p className={styles.nameText}>{data?.product_name}</p>
+      <hr className={styles.hr}/>
       <img src={data?.image_url} className={styles.materialDetailImage}/>
       {
         company === 'lx' ?
