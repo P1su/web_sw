@@ -25,7 +25,7 @@ const Reservation = () => {
     area: '',
     budget: '',
     content: '',
-    images: '',
+    images: [],
   });
   const handleChange = (e) => {
     setValues((prevValues) => ({
@@ -143,10 +143,10 @@ const Reservation = () => {
           />
         </div>
         <section className={styles.imageSection}>
-          <ImageInput setValues={setValues} />
-          <ImageInput />
-          <ImageInput />
-          <ImageInput />
+          <ImageInput values={values} setValues={setValues} name='0' />
+          <ImageInput values={values} setValues={setValues} name='1' />
+          <ImageInput values={values} setValues={setValues} name='2' />
+          <ImageInput values={values} setValues={setValues} name='3' />
         </section>
           <Textarea title='시공부위' placeholder='ex)방문.틀 6셋트(방3, 화장실2, 거실터닝도어1)
             샷시창.틀 확장형 5셋트 이중창 전체(방3, 거실1, 주방1)
