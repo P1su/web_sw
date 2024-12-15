@@ -82,10 +82,10 @@ const ReservationList = () => {
       }
       <ReservationItem date='문의 날짜' title='제목' name='글쓴이' />
       {
-        mockList.map((item) => (
+        data.map((item) => (
           <ReservationItem 
             key={item.id} 
-            date={item.date} 
+            date='임시 날짜' 
             title={item.title} 
             name={item.name} 
             onClick={() => handleModal(item.id)}
