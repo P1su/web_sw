@@ -24,13 +24,13 @@ const EventDetail = () => {
         <hr className={styles.hr} />
       </section>
       <section className={styles.titleSection}>
-        <h3 className={styles.h3}>이벤트 제목</h3>
+        <h3 className={styles.h3}>{data?.title}</h3>
         <span className={styles.dateSpan}>2024.12.01</span>
       </section>
       <hr className={styles.hr} />
       <article className={styles.article}>
         <p className={styles.p}>
-          이벤트가 여기 이렇게 작성이가 됩니다. 
+          {data?.content} 
         </p>
       </article>
       <BtnSmall onClick={handleNavigate}>목록으로 돌아가기</BtnSmall>
