@@ -89,22 +89,28 @@ const Reservation = () => {
           />
         </div>
         <div className={styles.inputDiv}>
-          <input 
-            title='시공 희망 날짜' 
-            placeholder='YYYY-MM-DD' 
-            onChange={handleChange}
-            value={values.startDate}
-            name='startDate'
-            type='date'
-          />
-          <input 
-            title='완공 희망 날짜' 
-            placeholder='YYYY-MM-DD'
-            onChange={handleChange}
-            value={values.endDate}
-            name='endDate' 
-            type='date'
-          />
+          <div className={styles.dateBox}>
+            <div className={styles.dateTitle}>시공 가능일자</div>
+            <input 
+              title='시공 희망 날짜' 
+              placeholder='YYYY-MM-DD' 
+              onChange={handleChange}
+              value={values.startDate}
+              name='startDate'
+              type='date'
+              className={styles.dateInput}
+            />
+            <span className={styles.dateTitle}> ~ </span>
+            <input 
+              title='완공 희망 날짜' 
+              placeholder='YYYY-MM-DD'
+              onChange={handleChange}
+              value={values.endDate}
+              name='endDate' 
+              type='date'
+              className={styles.dateInput}
+            />
+          </div>
           <Input 
             title='주소' 
             placeholder='시공 장소' 

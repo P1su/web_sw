@@ -65,3 +65,28 @@
   display: flex;
   gap: 4rem;
 }
+.dateInput {
+  width: 15rem;
+  height: 3.8rem;
+  border-radius: 5px;
+  border: 1px solid #a9a9a9;
+
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.5px;
+}
+.dateBox {
+}
+.dateTitle {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+  padding-bottom: 1rem;
+}
