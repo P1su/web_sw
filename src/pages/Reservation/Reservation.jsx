@@ -89,28 +89,6 @@ const Reservation = () => {
           />
         </div>
         <div className={styles.inputDiv}>
-          <div className={styles.dateBox}>
-            <div className={styles.dateTitle}>시공 가능일자</div>
-            <input 
-              title='시공 희망 날짜' 
-              placeholder='YYYY-MM-DD' 
-              onChange={handleChange}
-              value={values.startDate}
-              name='startDate'
-              type='date'
-              className={styles.dateInput}
-            />
-            <span className={styles.dateTitle}> ~ </span>
-            <input 
-              title='완공 희망 날짜' 
-              placeholder='YYYY-MM-DD'
-              onChange={handleChange}
-              value={values.endDate}
-              name='endDate' 
-              type='date'
-              className={styles.dateInput}
-            />
-          </div>
           <Input 
             title='주소' 
             placeholder='시공 장소' 
@@ -118,8 +96,6 @@ const Reservation = () => {
             value={values.address}
             name='address'
           />
-        </div>
-        <div className={styles.inputDiv}>
           <Input 
             title='평수' 
             placeholder='100000' 
@@ -141,6 +117,30 @@ const Reservation = () => {
             value={values.password}
             name='password'
           />
+        </div>
+        <div>
+          <div className={styles.dateTitle}>시공 가능일자</div>
+          <div className={styles.dateBox}>
+            <input 
+              title='시공 희망 날짜' 
+              placeholder='YYYY-MM-DD' 
+              onChange={handleChange}
+              value={values.startDate}
+              name='startDate'
+              type='date'
+              className={styles.dateInput}
+            />
+            <span className={styles.dateTitle}> ~ </span>
+            <input 
+              title='완공 희망 날짜' 
+              placeholder='YYYY-MM-DD'
+              onChange={handleChange}
+              value={values.endDate}
+              name='endDate' 
+              type='date'
+              className={styles.dateInput}
+            />
+          </div>
         </div>
         <section className={styles.imageSection}>
           <ImageInput values={values} setValues={setValues} name='0' />

@@ -66,7 +66,7 @@
   gap: 4rem;
 }
 .dateInput {
-  width: 15rem;
+  width: 27.95rem;
   height: 3.8rem;
   border-radius: 5px;
   border: 1px solid #a9a9a9;
@@ -79,6 +79,9 @@
   letter-spacing: -0.5px;
 }
 .dateBox {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
 }
 .dateTitle {
   color: #000;
