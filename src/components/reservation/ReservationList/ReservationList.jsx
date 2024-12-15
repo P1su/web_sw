@@ -11,7 +11,6 @@ import usePostPassword from '../../../hooks/queries/reservation/usePostPassword'
 
 const ReservationList = () => {
   const { data } = useGetReservationList();
-  console.log(data);
   const mockList = [
     {
       date: '11월 1일',
@@ -82,7 +81,7 @@ const ReservationList = () => {
       }
       <ReservationItem date='문의 날짜' title='제목' name='글쓴이' />
       {
-        data.map((item) => (
+        data?.map((item) => (
           <ReservationItem 
             key={item.id} 
             date='임시 날짜' 

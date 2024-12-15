@@ -11,7 +11,7 @@ const getReservationList = async () => {
 const useGetReservationList = () => {
   const { data, isLoading } = useQuery({
     queryKey: RESERVATIONLIST_QUERY_KEY,
-    queryFn: () => getReservationList(),
+    queryFn: getReservationList,
     retry: 0,
     onError: (error) => {
       console.error(error);

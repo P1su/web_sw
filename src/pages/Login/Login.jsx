@@ -3,19 +3,24 @@ import Input from './../../components/forms/input/Input';
 import BtnLarge from './../../components/buttons/Large/BtnLarge';
 import usePostLogin from '../../hooks/queries/login/usePostLogin';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  const { mutate: postLogin } = usePostLogin();
+  const navigate = useNavigate();
+  const { mutate: postLogin, error } = usePostLogin();
   const [values, setValues] = useState({
     username: '',
     password: '',
   });
-  console.log(values)
   const handlePost = () => {
     postLogin(values, {
       onSuccess: (data) => {
-        console.log(data);
+        localStorage.setItem('ACCESS_TOKEN', data.token);
+        navigate('/');
       },
+      onError: () => {
+        error.status === 401 ? alert('비밀번호가 틀렸습니다.') : alert('통신에 실패하였습니다.');
+      }
     });
   };
 
