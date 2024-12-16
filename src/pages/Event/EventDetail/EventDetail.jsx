@@ -8,7 +8,6 @@ import image from '../../../assets/img/eventPage.png'
 const EventDetail = () => {
   const { id } = useParams('id');
   const { data } = useGetEventItem(id);
-  console.log(data);
   const navigate = useNavigate();
   const handleNavigate = () => {
     navigate('/event');

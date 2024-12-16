@@ -2,8 +2,13 @@ import EventList from '../../components/Event/EventList/EventList';
 import Title from '../../components/Title/Title';
 import styles from './Event.module.css';
 import image from '../../assets/img/eventPage.png'
+import { useNavigate } from 'react-router-dom';
 
 const Event = () => {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate('/event-create');
+  };
   return(
     <div className={styles.pageWrapper}>
       <Title url={image}>Events</Title>
@@ -16,7 +21,7 @@ const Event = () => {
           localStorage.getItem('ACCESS_TOKEN') ? 
           (
             <div className={styles.linkBox}>
-              <a className={styles.a}>이벤트 작성하기</a>
+              <span className={styles.a} onClick={() => {handleNavigate()}}>이벤트 작성하기</span>
             </div>
           ) : null
         }

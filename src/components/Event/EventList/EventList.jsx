@@ -6,7 +6,6 @@ import useGetEventList from '../../../hooks/queries/event/useGetEventList';
 
 const EventList = () => {
   const { data } = useGetEventList();
-  console.log(data);
 
   const navigate = useNavigate();
   const handleNavigate = (id) => {
