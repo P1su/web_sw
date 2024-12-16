@@ -11,7 +11,6 @@ import MaterialList from './../../../components/Material/MaterialList/MaterialLi
 import useGetMaterialItem from '../../../hooks/queries/material/useGetMaterialItem';
 import image from '../../../assets/img/materialPage.png'
 
-
 const Compare = () => {
   const navigate = useNavigate();
   const location = useLocation();
