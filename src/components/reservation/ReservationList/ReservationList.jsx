@@ -74,8 +74,10 @@ const ReservationList = () => {
       {
         isOpen && (
           <Modal closeModal={closeModal}>
-            <Input title='비밀번호 입력' placeholder='비밀번호' value={password.password} setValue={setPassword} name='password' />
-            <BtnSmall onClick={handlePassword}>제출하기</BtnSmall>
+            <div className={styles.modal}>
+              <Input title='비밀번호 입력' placeholder='비밀번호' value={password.password} setValue={setPassword} name='password' />
+              <BtnSmall onClick={handlePassword}>제출하기</BtnSmall>
+            </div>
           </Modal>
         )
       }

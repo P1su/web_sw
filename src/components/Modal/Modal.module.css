@@ -9,6 +9,7 @@
 }
 .modalWrapper {
   height: auto;
+  max-height: 70%;
   background-color: #ffffff;
   z-index: 9999;
   position: fixed;
@@ -22,7 +23,7 @@
 .deleteField {
   display: flex;
   justify-content: flex-end;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 
   color: var(--placeholder, #bebebe);
   font-family: Pretendard;
