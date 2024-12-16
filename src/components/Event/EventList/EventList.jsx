@@ -6,47 +6,26 @@ import useGetEventList from '../../../hooks/queries/event/useGetEventList';
 
 const EventList = () => {
   const { data } = useGetEventList();
-  console.log(data);
-  const mockList = [
-    {
-      date: '12월 1일',
-      title: '12월 이벤트',
-      id: 0,
-    },
-    {
-      date: '11월 1일',
-      title: '11월 이벤트',
-      id: 1,
-    },
-    {
-      date: '10월 1일',
-      title: '10월 이벤트',
-      id: 2,
-    },
-    {
-      date: '9월 1일',
-      title: '9월 이벤트',
-      id: 3,
-    },
-    {
-      date: '8월 1일',
-      title: '8월 이벤트',
-      id: 4,
-    },
-  ];
 
   const navigate = useNavigate();
   const handleNavigate = (id) => {
     navigate(`/event/${id}`)
-  }
+  };
+
+  const formattedDate = (oldDate) => {
+    const date = new Date(oldDate);
+    const formattedDate = `${date.getFullYear()}년 ${date.getMonth() + 1}월 ${date.getDate()}일`;
+    return formattedDate;
+  };
+  
   return(
     <div className={styles.eventListWrapper}>
       <ReservationItem date='게시일' title='제목' />
       {
-        mockList.map((item) => (
+        data?.map((item) => (
           <EventItem
             key={item.id}
-            date={item.date}
+            date={formattedDate(item.event_date)}
             title={item.title}
             onClick={() => handleNavigate(item.id)}
           />

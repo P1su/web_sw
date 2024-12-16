@@ -14,6 +14,7 @@ import EventDetail from '../pages/Event/EventDetail/EventDetail';
 import Portfolio from '../pages/Portfolio/Portfolio';
 import PortfolioDetail from '../pages/Portfolio/Detail/PortfolioDetail';
 import ReservationBoard from '../pages/Reservation/ReservationBoard/ReservationBoard';
+import EventCreate from '../pages/Event/EventCreate/EventCreate';
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
       {
         path: '/event',
         element: <Event />,
+      },
+      {
+        path: '/event-create',
+        element: <EventCreate />,
       },
       {
         path: '/event/:id',

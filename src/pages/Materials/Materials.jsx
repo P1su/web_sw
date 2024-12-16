@@ -1,11 +1,12 @@
 import Title from '../../components/Title/Title';
 import styles from './Materials.module.css';
 import MaterialList from './../../components/Material/MaterialList/MaterialList';
+import image from '../../assets/img/materialPage.png'
 
 const Materials = () => {
   return(
     <div className={styles.materialsPageWrapper}>
-      <Title>Films</Title>
+      <Title url={image}>Films</Title>
       <h2 className={styles.titleText}>자재를 확인해보세요</h2>
       <p className={styles.text}>
         실제 시공에 사용되는 <br />

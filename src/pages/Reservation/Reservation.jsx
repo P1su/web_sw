@@ -7,6 +7,8 @@ import BtnSmall from '../../components/buttons/Small/BtnSmall';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import usePostReservation from '../../hooks/queries/reservation/usePostReservation';
+import image from '../../assets/img/reservationPage.png'
+
 const Reservation = () => {
   const navigate = useNavigate();
   const { mutate: postReservation }= usePostReservation();
@@ -25,9 +27,8 @@ const Reservation = () => {
     area: '',
     budget: '',
     content: '',
-    file: '',
+    images: [],
   });
-  console.log(values);
   const handleChange = (e) => {
     setValues((prevValues) => ({
       ...prevValues,
@@ -39,6 +40,7 @@ const Reservation = () => {
     postReservation(values, {
       onSuccess: () => {
         alert('예약이 성공적으로 접수되었습니다.');
+        navigate('/reservation-board');
       },
       onError: (error) => {
         console.error(error);
@@ -48,7 +50,7 @@ const Reservation = () => {
 
   return(
     <div className={styles.pageWrapper}>
-      <Title>Reservation</Title>
+      <Title url={image}>Reservation</Title>
       <h2 className={styles.titleText}>견적 문의하기</h2>
       <p className={styles.text}>
         문의하실 내용을 작성해주세요 <br />
@@ -89,22 +91,6 @@ const Reservation = () => {
           />
         </div>
         <div className={styles.inputDiv}>
-          <input 
-            title='시공 희망 날짜' 
-            placeholder='YYYY-MM-DD' 
-            onChange={handleChange}
-            value={values.startDate}
-            name='startDate'
-            type='date'
-          />
-          <input 
-            title='완공 희망 날짜' 
-            placeholder='YYYY-MM-DD'
-            onChange={handleChange}
-            value={values.endDate}
-            name='endDate' 
-            type='date'
-          />
           <Input 
             title='주소' 
             placeholder='시공 장소' 
@@ -112,8 +98,6 @@ const Reservation = () => {
             value={values.address}
             name='address'
           />
-        </div>
-        <div className={styles.inputDiv}>
           <Input 
             title='평수' 
             placeholder='100000' 
@@ -136,11 +120,35 @@ const Reservation = () => {
             name='password'
           />
         </div>
+        <div>
+          <div className={styles.dateTitle}>시공 가능일자</div>
+          <div className={styles.dateBox}>
+            <input 
+              title='시공 희망 날짜' 
+              placeholder='YYYY-MM-DD' 
+              onChange={handleChange}
+              value={values.startDate}
+              name='startDate'
+              type='date'
+              className={styles.dateInput}
+            />
+            <span className={styles.dateTitle}> ~ </span>
+            <input 
+              title='완공 희망 날짜' 
+              placeholder='YYYY-MM-DD'
+              onChange={handleChange}
+              value={values.endDate}
+              name='endDate' 
+              type='date'
+              className={styles.dateInput}
+            />
+          </div>
+        </div>
         <section className={styles.imageSection}>
-          <ImageInput setValues={setValues} />
-          <ImageInput />
-          <ImageInput />
-          <ImageInput />
+          <ImageInput values={values} setValues={setValues} name='0' />
+          <ImageInput values={values} setValues={setValues} name='1' />
+          <ImageInput values={values} setValues={setValues} name='2' />
+          <ImageInput values={values} setValues={setValues} name='3' />
         </section>
           <Textarea title='시공부위' placeholder='ex)방문.틀 6셋트(방3, 화장실2, 거실터닝도어1)
             샷시창.틀 확장형 5셋트 이중창 전체(방3, 거실1, 주방1)

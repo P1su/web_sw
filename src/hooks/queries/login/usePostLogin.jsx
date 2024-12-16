@@ -2,7 +2,7 @@ import { useMutation } from '@tanstack/react-query';
 import { instance } from '../../../apis/instance'
 
 const postLogin = async (body) => {
-  const res = await instance.post('/user/login', body);
+  const res = await instance.post('/admin/login', body);
   return res.data;
 }
 

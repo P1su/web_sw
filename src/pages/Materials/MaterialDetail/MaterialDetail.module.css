@@ -9,13 +9,19 @@
   height: 50rem;
   padding-bottom: 5rem;
 }
+.hr {
+  display: block;
+  width: 125rem;
+  margin-bottom: 2rem;
+}
 .nameText {
   font-family: Pretendard;
-  font-size: 24px;
+  font-size: 32px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
-  padding-bottom: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
 }
 .categoryText {
   font-family: Pretendard;

@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  align-items: center;
 }
 .listBox {
   display: grid;
@@ -34,7 +35,31 @@
 }
 .active {
   color: #111111;
+  font-weight: 600;
 }
 .unactive {
   cursor: pointer;
+}
+.pageSpan {
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.pageButton {
+  background: transparent;
+  border: none;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+.pagination {
+  display: flex;
+  gap: 1rem;
+  text-align: center;
+  place-items: center;
 }

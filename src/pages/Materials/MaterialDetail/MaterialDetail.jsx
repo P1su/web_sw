@@ -3,6 +3,8 @@ import styles from './MaterialDetail.module.css';
 import Title from '../../../components/Title/Title';
 import BtnSmall from '../../../components/buttons/Small/BtnSmall';
 import useGetMaterialItem from '../../../hooks/queries/material/useGetMaterialItem';
+import image from '../../../assets/img/materialPage.png'
+
 
 const MaterialDetail = () => {
   const { name } = useParams('name');
@@ -17,8 +19,9 @@ const MaterialDetail = () => {
 
   return(
     <div className={styles.materialDetailPageWrapper}>
-      <Title>Films</Title>
+      <Title url={image}>Films</Title>
       <p className={styles.nameText}>{data?.product_name}</p>
+      <hr className={styles.hr}/>
       <img src={data?.image_url} className={styles.materialDetailImage}/>
       {
         company === 'lx' ?

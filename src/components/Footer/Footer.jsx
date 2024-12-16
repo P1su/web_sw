@@ -9,7 +9,7 @@ const Footer = () => {
   const navigate = useNavigate();
   const navItems = [
     { label: '자재 확인', path: '/materials', },
-    { label: '견적 문의', path: '/reservation', },
+    { label: '견적 문의', path: '/reservation-board', },
     { label: '포트폴리오', path: '/portfolio', },
     { label: '관리자로그인', path: '/login', },
   ];

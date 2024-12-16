@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import styles from './ImageInput.module.css';
 import addImage from '../../../assets/img/addImage.png';
-const ImageInput = ({setValues}) => {
+const ImageInput = ({ values, setValues, name}) => {
   const [imgUrl, setImgUrl] = useState('');
 
-  const handleImageChange = (event) => {
+  const handleImageChange = (name, event) => {
     const file = event.target.files[0];
     
     if (file) {
@@ -13,16 +13,19 @@ const ImageInput = ({setValues}) => {
         setImgUrl(reader.result);
       };
       reader.readAsDataURL(file);
+
+      const updatedImages = [...values.images];
+      updatedImages[name] = file;  // 배열의 해당 인덱스에 파일을 설정
       setValues((prevValues) => ({
         ...prevValues,
-        file: file,
+        images: updatedImages,  // images 배열을 업데이트
       }));
     }
   };
 
   return(
     <div className={styles.imageBox}>
-      <label htmlFor='imgFile' className={styles.imageBox}>
+      <label htmlFor={name} className={styles.imageBox}>
         {
           imgUrl ==='' ? 
           <img src={addImage} className={styles.imageBox}/>
@@ -32,9 +35,10 @@ const ImageInput = ({setValues}) => {
       </label>
       <input 
         type='file' 
-        id='imgFile' 
-        onChange={handleImageChange} 
+        id={name} 
+        onChange={(event) => handleImageChange(Number(name), event)} 
         style={{ display: 'none' }}
+        name={name}
       />
     </div>
   );
