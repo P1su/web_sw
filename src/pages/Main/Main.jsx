@@ -1,6 +1,5 @@
 import styles from './Main.module.css'
 import Title from '../../components/Title/Title';
-import PortfolioItem from './../../components/portfolio/portfolioItem/PortfolioItem';
 
 const Main = () => {
   return(
@@ -12,9 +11,6 @@ const Main = () => {
         e끌림인테리어필름이 함께합니다 <br />
       </p>
       <hr className={styles.hr}/>
-      <section>
-        <PortfolioItem />
-      </section>
     </div>
   );
 };
