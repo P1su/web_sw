@@ -11,38 +11,6 @@ import usePostPassword from '../../../hooks/queries/reservation/usePostPassword'
 
 const ReservationList = () => {
   const { data } = useGetReservationList();
-  const mockList = [
-    {
-      date: '11월 1일',
-      title: '시공 신청합니다.',
-      name: '송아무개',
-      id: 1,
-    },
-    {
-      date: '11월 1일',
-      title: '시공 신청합니다.',
-      name: '송아무개',
-      id: 2,
-    },
-    {
-      date: '11월 1일',
-      title: '시공 신청합니다.',
-      name: '송아무개',
-      id: 3,
-    },
-    {
-      date: '11월 1일',
-      title: '시공 신청합니다.',
-      name: '송아무개',
-      id: 4,
-    },
-    {
-      date: '11월 1일',
-      title: '시공 신청합니다.',
-      name: '송아무개',
-      id: 5,
-    },
-  ];
   const [isOpen, openModal, closeModal] = useModal();
   const [password, setPassword] = useState({password: '',});
   const [id, setId] = useState(0);

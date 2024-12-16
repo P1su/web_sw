@@ -7,14 +7,13 @@ import useGetMaterialList from '../../../hooks/queries/material/useGetMaterialLi
 import { lxTypes, patterns, coatings } from '../../../utils/materialTypes';
 
 const MaterialList = ({ setCompare, isCompare=false, closeModal }) => {
-  console.log(isCompare)
   const navigate = useNavigate();
   const [company, setComapny] = useState('lx');
   const [filter, setFilter] = useState('');
   const [page, setPage] = useState(0); // 현재 페이지
   const itemsPerPage = 100; // 한 페이지에 표시할 자재 수
   const { data } = useGetMaterialList(company);
-  console.log(data);
+
   const handleActive = () => {
     setComapny(company === 'lx'? 'hyundai' : 'lx');
     setPage(0);
@@ -116,15 +115,17 @@ const MaterialList = ({ setCompare, isCompare=false, closeModal }) => {
         <button
           onClick={() => handlePageChange(page - 1)}
           disabled={page === 0}
+          className={styles.pageButton}
         >
-          이전
+          &lt;
         </button>
-        <span>페이지 {page + 1}</span>
+        <span className={styles.pageSpan}>페이지 {page + 1}</span>
         <button
           onClick={() => handlePageChange(page + 1)}
           disabled={data && currentPageData.length < itemsPerPage}
+          className={styles.pageButton}
         >
-          다음
+          &gt;
         </button>
       </div>
     </div>
