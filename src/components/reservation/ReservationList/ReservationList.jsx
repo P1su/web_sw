@@ -17,6 +17,11 @@ const ReservationList = () => {
   const { mutate: postPassword } = usePostPassword();
   const navigate = useNavigate();
 
+  const formattedDate = (oldDate) => {
+    const date = new Date(oldDate);
+    const formattedDate = `${date.getFullYear()}년 ${date.getMonth() + 1}월 ${date.getDate()}일`;
+    return formattedDate;
+  };
   const handlePassword = () => {
     const params = {
       id: id,
@@ -54,7 +59,7 @@ const ReservationList = () => {
         data?.map((item) => (
           <ReservationItem 
             key={item.id} 
-            date='임시 날짜' 
+            date={formattedDate(item.created_at)}
             title={item.title} 
             name={item.name} 
             onClick={() => handleModal(item.id)}

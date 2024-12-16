@@ -17,7 +17,8 @@ const EventList = () => {
     const date = new Date(oldDate);
     const formattedDate = `${date.getFullYear()}년 ${date.getMonth() + 1}월 ${date.getDate()}일`;
     return formattedDate;
-  }
+  };
+  
   return(
     <div className={styles.eventListWrapper}>
       <ReservationItem date='게시일' title='제목' />
