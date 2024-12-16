@@ -2,9 +2,9 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Title from '../../../components/Title/Title';
 import styles from './ReservationDetail.module.css';
 import InfoBox from '../../../components/InfoBox/InfoBox';
-import mockImage from '../../../assets/img/mockItem.png';
 import BtnLarge from '../../../components/buttons/Large/BtnLarge';
 import useGetReservationDetail from '../../../hooks/queries/reservation/useGetReservationDetail';
+import image from '../../../assets/img/reservationPage.png';
 
 //get으로 데이터 받아오면 배열에 집어넣고 map 으로 반복 처리
 const ReservationDetail = () => {
@@ -20,7 +20,7 @@ const ReservationDetail = () => {
   ////////여기 데이터 fetch 해서 처리중이었음음
   return(
     <div className={styles.pageWrapper}>
-      <Title>Reservation</Title>
+      <Title url={image}>Reservation</Title>
       <section className={styles.body}>
         <section>
           <h3>{data.title}</h3>

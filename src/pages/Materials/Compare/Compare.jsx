@@ -9,6 +9,8 @@ import useModal from '../../../hooks/common/useModal';
 import Modal from '../../../components/Modal/Modal';
 import MaterialList from './../../../components/Material/MaterialList/MaterialList';
 import useGetMaterialItem from '../../../hooks/queries/material/useGetMaterialItem';
+import image from '../../../assets/img/materialPage.png'
+
 
 const Compare = () => {
   const navigate = useNavigate();
@@ -31,7 +33,7 @@ const Compare = () => {
           <MaterialList setCompare={setCompare} isCompare={true} closeModal={closeModal}/>
         </Modal>
       }
-      <Title>Films</Title>
+      <Title url={image}>Films</Title>
       <div className={styles.compareBox}>
         <MaterialItem itemValue={item} width='40rem' height='40rem'/>
         <div>

@@ -3,6 +3,7 @@ import styles from './EventDetail.module.css';
 import Title from '../../../components/Title/Title';
 import BtnSmall from '../../../components/buttons/Small/BtnSmall';
 import useGetEventItem from '../../../hooks/queries/event/useGetEventItem';
+import image from '../../../assets/img/eventPage.png'
 
 const EventDetail = () => {
   const { id } = useParams('id');
@@ -15,7 +16,7 @@ const EventDetail = () => {
   
   return(
     <div className={styles.pageWrapper}>
-      <Title>Events</Title>
+      <Title url={image}>Events</Title>
       <section>
         <h2 className={styles.titleText}>이달의 이벤트</h2>
         <p className={styles.text}>

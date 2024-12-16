@@ -7,6 +7,8 @@ import BtnSmall from '../../components/buttons/Small/BtnSmall';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import usePostReservation from '../../hooks/queries/reservation/usePostReservation';
+import image from '../../assets/img/reservationPage.png'
+
 const Reservation = () => {
   const navigate = useNavigate();
   const { mutate: postReservation }= usePostReservation();
@@ -48,7 +50,7 @@ const Reservation = () => {
 
   return(
     <div className={styles.pageWrapper}>
-      <Title>Reservation</Title>
+      <Title url={image}>Reservation</Title>
       <h2 className={styles.titleText}>견적 문의하기</h2>
       <p className={styles.text}>
         문의하실 내용을 작성해주세요 <br />

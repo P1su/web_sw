@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import ReservationList from '../../../components/reservation/ReservationList/ReservationList';
 import Title from '../../../components/Title/Title';
 import styles from './ReservationBoard.module.css';
+import image from '../../../assets/img/reservationPage.png';
 
 const ReservationBoard = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const ReservationBoard = () => {
 
   return(
     <div className={styles.pageWrapper}>
-      <Title>Reservation</Title>
+      <Title url={image}>Reservation</Title>
       <h2 className={styles.titleText}>견적 게시판</h2>
       <p className={styles.text}>
         문의 내역을 확인하실 수 있습니다<br />
