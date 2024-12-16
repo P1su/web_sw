@@ -12,6 +12,14 @@ const Event = () => {
         <p className={styles.text}>
           매달 진행되는 새로운 이벤트들을 확인해보세요<br />
         </p>
+        {
+          localStorage.getItem('ACCESS_TOKEN') ? 
+          (
+            <div className={styles.linkBox}>
+              <a className={styles.a}>이벤트 작성하기</a>
+            </div>
+          ) : null
+        }
         <hr className={styles.hr}/>
       </section>
       <EventList />

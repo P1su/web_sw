@@ -39,8 +39,12 @@ const ReservationList = () => {
     setPassword({ password: '', });
   }
   const handleModal = (id) => {
-    openModal();
-    setId(id);
+    if(localStorage.getItem('ACCESS_TOKEN')){
+      navigate(`/reservation/${id}`);
+    }else {
+      openModal();
+      setId(id);
+    }
   };
   return(
     <div className={styles.reservationListWrapper}>
