@@ -10,7 +10,7 @@
   justify-content: center !important;
   background-color: #f8f9fa !important;
   padding: 10px 0 !important;
-  font-family: 'Noto Sans KR', sans-serif !important;
+  font-family: Pretendard !important;
   position: relative !important;
 }
 
@@ -28,7 +28,7 @@
 }
 
 :global(.fc-toolbar-chunk button) {
-  background-color: #5c9ead !important;
+  background-color: #ddb892 !important;
   color: white !important;
   border: none !important;
   border-radius: 7px !important;
@@ -38,14 +38,15 @@
 }
 
 :global(.fc-toolbar-chunk button:hover) {
-  background-color: #3a7d8c !important;
+  background-color: #e6ccb2 !important;
 }
 
 :global(.fc-toolbar-title) {
+  font-family: Pretendard !important;
   font-size: 1.5rem !important;
   font-weight: bold !important;
   color: #333 !important;
-  font-family: 'Pretendard', 'Noto Sans KR', sans-serif !important;
+  font-family: Pretendard !important;
   text-align: center !important;
   margin: 0 auto !important;
 }
@@ -80,6 +81,7 @@
 }
 
 :global(.fc-daygrid-day .fc-event) {
+  font-family: Pretendard !important;
   font-size: 1.2rem !important;
   font-weight: bold !important;
   color: rgba(0, 0, 0, 1) !important;
