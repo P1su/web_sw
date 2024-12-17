@@ -33,6 +33,14 @@ const Compare = () => {
         </Modal>
       }
       <Title url={image}>Films</Title>
+      <section>
+        <h2 className={styles.titleText}>자재 비교</h2>
+        <p className={styles.text}>
+        다양한 자재를 비교하여, 인테리어에 어울리는 자재를 찾아보세요. <br />
+        고급스러움과 세련됨을 더할 자재로, 공간을 한층 품격 있게 완성할 수 있습니다.
+        </p>
+        <hr className={styles.hr}/>
+      </section>
       <div className={styles.compareBox}>
         <MaterialItem itemValue={item} width='40rem' height='40rem'/>
         <div>

@@ -3,15 +3,36 @@ import Title from '../../../components/Title/Title';
 import image from '../../../assets/img/portfolioPage.png';
 import { useState } from 'react';
 import ImageInput from './../../../components/forms/image/ImageInput';
+import usePostPortfolio from '../../../hooks/queries/portfolio/usePostPortfolio';
+import { useNavigate } from 'react-router-dom';
+import BtnSmall from '../../../components/buttons/Small/BtnSmall';
 
 const PortfolioCreate = () => {
   const [values, setValues] = useState({
     title: '',
-    description: '',
+    content: '',
+    blog_link: '',
+    images: [],
   });
-  const onChange = (e) => {
+  const navigate = useNavigate();
+  const { mutate: postPortfolio } = usePostPortfolio();
 
-  }
+  const onChange = (e) => {
+    setValues((prevValues) => ({
+      ...prevValues,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handlePost = () => {
+    postPortfolio(values, {
+      onSuccess: () => {
+        alert('작성 완료');
+        navigate('/portfolio');
+      },
+    });
+  };
+
   return(
     <div className={styles.pageWrapper}>
       <Title url={image}>Portfolio</Title>
@@ -27,13 +48,19 @@ const PortfolioCreate = () => {
       </section>
       <hr className={styles.hr}/>
       <input
-          className={styles.input}
-          placeholder='블로그 링크' 
-          value={values.title} 
-          onChange={onChange} 
-          name='title' 
-        />
+        className={styles.smallInput}
+        placeholder='블로그 링크를 입력해주세요' 
+        value={values.blog_link} 
+        onChange={onChange} 
+        name='blog_link' 
+      />
       <article className={styles.article}>
+        <section className={styles.imageBox}>
+          <ImageInput values={values} setValues={setValues} name='0' />
+          <ImageInput values={values} setValues={setValues} name='1' />
+          <ImageInput values={values} setValues={setValues} name='2' />
+          <ImageInput values={values} setValues={setValues} name='3' />
+        </section>
         <textarea 
           className={styles.textarea}
           placeholder='내용을 입력하세요' 
@@ -41,12 +68,8 @@ const PortfolioCreate = () => {
           onChange={onChange} 
           name='content' 
         />
-        <ImageInput />
-        <ImageInput />
-        <ImageInput />
-        <ImageInput />
-        
       </article>
+      <BtnSmall onClick={handlePost}>작성하기</BtnSmall>
     </div>
   );
 };

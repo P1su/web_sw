@@ -1,0 +1,52 @@
+.sectionWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.textContainerLeft,
+.textContainerRight {
+  width: 45%;
+  text-align: left;
+
+  color: #3e3e3e;
+  font-family: Pretendard;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: -0.5px;
+
+  font-size: 1.2rem;
+}
+
+.textContainerLeft {
+  margin-left: 5%;
+}
+
+.mainTitle {
+  color: #000000;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.textBlock {
+  font-size: 2rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.imageContainer {
+  width: 50%;
+  height: auto;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-height: 550px;
+  object-fit: cover;
+}

@@ -1,6 +1,74 @@
 .pageWrapper {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pageWrapper input:focus {
+  border: none;
+  outline: none;
 }
 .hr {
+  width: 125rem;
+}
+.h2 {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 7rem 0 2rem 0;
+}
+.input {
+  width: 125rem;
+  padding: 1rem;
+  border: none;
+  margin-top: 2rem;
+
+  color: #000;
+  font-family: Pretendard;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.smallInput {
+  width: 125rem;
+  padding: 1rem;
+  border: none;
+
+  color: #000;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 2rem;
+}
+.textarea {
+  width: 125rem;
+  min-height: 50rem;
+  height: auto;
+  border: none;
+  margin-top: 2rem;
+  resize: none;
+
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.textarea:focus {
+  border: none;
+  outline: none;
+}
+.imageBox {
+  display: flex;
+  width: 125rem;
+  gap: 2rem;
+}
+.article {
   width: 125rem;
 }
