@@ -48,13 +48,19 @@ const PortfolioCreate = () => {
       </section>
       <hr className={styles.hr}/>
       <input
-          className={styles.input}
-          placeholder='블로그 링크' 
-          value={values.blog_link} 
-          onChange={onChange} 
-          name='blog_link' 
-        />
+        className={styles.smallInput}
+        placeholder='블로그 링크를 입력해주세요' 
+        value={values.blog_link} 
+        onChange={onChange} 
+        name='blog_link' 
+      />
       <article className={styles.article}>
+        <section className={styles.imageBox}>
+          <ImageInput values={values} setValues={setValues} name='0' />
+          <ImageInput values={values} setValues={setValues} name='1' />
+          <ImageInput values={values} setValues={setValues} name='2' />
+          <ImageInput values={values} setValues={setValues} name='3' />
+        </section>
         <textarea 
           className={styles.textarea}
           placeholder='내용을 입력하세요' 
@@ -62,10 +68,6 @@ const PortfolioCreate = () => {
           onChange={onChange} 
           name='content' 
         />
-        <ImageInput values={values} setValues={setValues} name='0' />
-        <ImageInput values={values} setValues={setValues} name='1' />
-        <ImageInput values={values} setValues={setValues} name='2' />
-        <ImageInput values={values} setValues={setValues} name='3' />
       </article>
       <BtnSmall onClick={handlePost}>작성하기</BtnSmall>
     </div>

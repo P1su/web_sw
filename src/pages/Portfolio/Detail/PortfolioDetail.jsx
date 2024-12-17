@@ -50,6 +50,9 @@ const PortfolioDetail = () => {
               ))
             }
           </section>
+          <p>
+            {data.content}
+          </p>
         </article>
       </section>
     </div>
