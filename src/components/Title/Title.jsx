@@ -1,7 +1,6 @@
 import styles from './Title.module.css';
 
 const Title = ({ children, url }) => {
-  console.log(url)
   return (
     <h1 className={styles.titleWrapper} style={{backgroundImage:`url(${url})`}}>{children}</h1>
   );

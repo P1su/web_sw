@@ -69,3 +69,26 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
+.h2 {
+  font-family: Pretendard;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 7rem 0 2rem 0;
+}
+.modifySection {
+  width: 125rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.modifySection span {
+  cursor: pointer;
+}

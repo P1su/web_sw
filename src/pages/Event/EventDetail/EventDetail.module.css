@@ -67,3 +67,19 @@
   height: auto;
   padding-bottom: 5rem;
 }
+.modifySection {
+  width: 125rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.modifySection span {
+  cursor: pointer;
+}

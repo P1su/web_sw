@@ -28,3 +28,13 @@
   font-size: 24px;
   font-weight: 700;
 }
+.span {
+  font-family: 'Pretendard';
+  font-size: 12px;
+  font-weight: 400;
+}
+.rightBox {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}

@@ -46,11 +46,24 @@ const EventCreate = () => {
     <div className={styles.pageWrapper}>
       <Title url={image}>Events</Title>
       <section className={styles.titleSection}>
-        <input placeholder='제목을 입력하세요' value={values.title} onChange={onChange} name='title' />
+        <h3 className={styles.h3}>이벤트 작성</h3>
+        <input
+          className={styles.input}
+          placeholder='제목을 입력하세요' 
+          value={values.title} 
+          onChange={onChange} 
+          name='title' 
+        />
       </section>
       <hr className={styles.hr} />
       <article className={styles.article}>
-        <textarea placeholder='내용일 입력하세요' value={values.content} onChange={onChange} name='content' />
+        <textarea 
+          className={styles.textarea}
+          placeholder='내용을 입력하세요' 
+          value={values.content} 
+          onChange={onChange} 
+          name='content' 
+        />
       </article>
       <BtnSmall onClick={handleSubmit}>이벤트 생성하기</BtnSmall>
     </div>
