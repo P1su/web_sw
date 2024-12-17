@@ -1,0 +1,95 @@
+.calendarWrapper {
+  max-width: 880px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+:global(.fc-toolbar) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #f8f9fa !important;
+  padding: 10px 0 !important;
+  font-family: 'Noto Sans KR', sans-serif !important;
+  position: relative !important;
+}
+
+:global(.fc-toolbar-chunk:first-child),
+:global(.fc-toolbar-chunk:last-child) {
+  position: absolute !important;
+}
+
+:global(.fc-toolbar-chunk:first-child) {
+  left: 10px !important;
+}
+
+:global(.fc-toolbar-chunk:last-child) {
+  right: 10px !important;
+}
+
+:global(.fc-toolbar-chunk button) {
+  background-color: #5c9ead !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 7px !important;
+  padding: 6px 9px !important;
+  font-size: 1rem !important;
+  transition: background-color 0.3s ease !important;
+}
+
+:global(.fc-toolbar-chunk button:hover) {
+  background-color: #3a7d8c !important;
+}
+
+:global(.fc-toolbar-title) {
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  color: #333 !important;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+:global(.fc-col-header-cell) {
+  background-color: #ddd !important;
+  color: #333 !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  height: 30px !important;
+  line-height: 30px !important;
+  border: 1px solid #ccc !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
+}
+
+:global(.fc-daygrid-day-frame) {
+  height: 0 !important;
+  padding-bottom: 100% !important;
+  position: relative !important;
+  background-color: #fff !important;
+  border: 1px solid #ddd !important;
+  box-sizing: border-box !important;
+}
+
+:global(.fc-daygrid-day-top) {
+  position: absolute !important;
+  top: 5px !important;
+  left: 5px !important;
+  font-size: 1.2rem !important;
+  color: #333 !important;
+}
+
+:global(.fc-daygrid-day .fc-event) {
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+  color: rgba(0, 0, 0, 1) !important;
+  text-align: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100% !important;
+  background-color: rgba(255, 99, 99, 0.2) !important;
+  border: none !important;
+  border-radius: 3px !important;
+  opacity: 1 !important;
+}

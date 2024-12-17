@@ -25,3 +25,15 @@
   letter-spacing: -0.5px;
   padding-bottom: 5rem;
 }
+.calendarTitle {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 7rem 0 2rem 0;
+}
+.sectionSpacing {
+  margin-bottom: 4rem;
+}
