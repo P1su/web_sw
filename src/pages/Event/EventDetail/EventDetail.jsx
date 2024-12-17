@@ -4,15 +4,26 @@ import Title from '../../../components/Title/Title';
 import BtnSmall from '../../../components/buttons/Small/BtnSmall';
 import useGetEventItem from '../../../hooks/queries/event/useGetEventItem';
 import image from '../../../assets/img/eventPage.png'
+import useDeleteEvent from '../../../hooks/queries/event/useDeleteEvent';
 
 const EventDetail = () => {
   const { id } = useParams('id');
   const { data } = useGetEventItem(id);
+  const { mutate: deleteEvent } =  useDeleteEvent(id);
   const navigate = useNavigate();
+  
   const handleNavigate = () => {
     navigate('/event');
   };
-  
+  const handleDelete = () => {
+    deleteEvent({}, {
+      onSuccess: () => {
+        alert('이벤트가 삭제되었습니다');
+        navigate('/event');
+      },
+    });
+  };
+
   return(
     <div className={styles.pageWrapper}>
       <Title url={image}>Events</Title>
@@ -21,6 +32,14 @@ const EventDetail = () => {
         <p className={styles.text}>
           매달 진행되는 새로운 이벤트들을 확인해보세요<br />
         </p>
+        <div className={styles.modifySection}>
+          <span>
+            수정하기
+          </span>
+          <span onClick={() => {handleDelete()}}>
+            삭제하기
+          </span>
+        </div>
         <hr className={styles.hr} />
       </section>
       <section className={styles.titleSection}>
