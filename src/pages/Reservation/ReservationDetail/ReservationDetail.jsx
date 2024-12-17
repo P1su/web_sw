@@ -5,27 +5,40 @@ import InfoBox from '../../../components/InfoBox/InfoBox';
 import BtnLarge from '../../../components/buttons/Large/BtnLarge';
 import useGetReservationDetail from '../../../hooks/queries/reservation/useGetReservationDetail';
 import image from '../../../assets/img/reservationPage.png';
+import useDeleteReservation from '../../../hooks/queries/reservation/useDeleteReservation';
 
-//get으로 데이터 받아오면 배열에 집어넣고 map 으로 반복 처리
 const ReservationDetail = () => {
   const { id } = useParams('id');
   const { data, isLoading } = useGetReservationDetail(id);
+  const { mutate: deleteReservation } = useDeleteReservation(id);
   const navigate = useNavigate();
   const handleNavigate = () => {
     navigate('/reservation-board');
   };
+  
   if(isLoading){
     return <p>Loading...</p>;
   }
+
   const formattedDate = (oldDate) => {
     const date = new Date(oldDate);
     const formattedDate = `${date.getFullYear()}년 ${date.getMonth() + 1}월 ${date.getDate()}일`;
     return formattedDate;
-  }
-  ////////여기 데이터 fetch 해서 처리중이었음음
+  };
+
+  const handleDelete = () => {
+    deleteReservation({},{
+      onSuccess: () => {
+        alert('성공적으로 삭제되었습니다.');
+        navigate('/reservation-board');
+      },
+    });
+  };
+
   return(
     <div className={styles.pageWrapper}>
       <Title url={image}>Reservation</Title>
+      <h2 className={styles.h2}>견적 문의 확인</h2>
       <section className={styles.body}>
         <div>
           <section className={styles.titleSection}>
@@ -60,6 +73,10 @@ const ReservationDetail = () => {
         <p className={styles.reservationContent}>
           {data.content}
         </p>
+        <section className={styles.modifySection}>
+          <span>수정하기</span>
+          <span onClick={() => {handleDelete()}}>삭제하기</span>
+        </section>
         <BtnLarge onClick={handleNavigate}>목록으로 돌아가기</BtnLarge>
       </section>
     </div>

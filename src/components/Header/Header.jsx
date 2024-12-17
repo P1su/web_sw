@@ -35,15 +35,23 @@ const Header = () => {
           ))
         }
       </nav>
-      <nav className={styles.linkItems}>
+      <div className={styles.rightBox}>
         {
-          links.map((item) => (
-            <a key={item.label} href={item.path} target='_blank'>
-              {item.Component}
-            </a>
-          ))
+          localStorage.getItem('ACCESS_TOKEN') ? 
+            <span className={styles.span}>관리자님, 환영합니다!</span>
+          :
+            null
         }
-      </nav>
+        <nav className={styles.linkItems}>
+          {
+            links.map((item) => (
+              <a key={item.label} href={item.path} target='_blank'>
+                {item.Component}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
     </header>
   );
 };

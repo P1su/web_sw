@@ -33,4 +33,12 @@
   justify-content: center;
   gap: 3rem;
   padding-top: 2rem;
+
+  font-family: Pretendard;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  padding-bottom: 5rem;
 }
