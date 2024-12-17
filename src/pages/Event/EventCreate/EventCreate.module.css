@@ -1,3 +1,50 @@
 .pageWrapper {
   width: 100%;
 }
+.hr {
+  width: 125rem;
+}
+.h3 {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 7rem 0 2rem 0;
+}
+.input {
+  width: 125rem;
+  padding: 1rem;
+  border: none;
+  margin-top: 2rem;
+
+  color: #000;
+  font-family: Pretendard;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.input:focus {
+  border: none;
+  outline: none;
+}
+.textarea {
+  width: 125rem;
+  min-height: 50rem;
+  height: auto;
+  border: none;
+  margin-top: 2rem;
+  resize: none;
+
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.textarea:focus {
+  border: none;
+  outline: none;
+}
