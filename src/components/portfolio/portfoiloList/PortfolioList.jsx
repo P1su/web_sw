@@ -4,7 +4,6 @@ import styles from './PortfolioList.module.css';
 
 const PortfolioList = () => {
   const { data } = useGetPortfolioList();
-  console.log(data);
 
   return(
     <div className={styles.wrapper}>

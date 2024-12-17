@@ -5,8 +5,7 @@ const PortfolioItem = ({ imageUrl, title, id }) => {
   const navigate = useNavigate();
   const handleNavigate = () => {
     navigate(`/portfolio/${id}`);
-  }
-  console.log(imageUrl)
+  };
 
   return(
     <div className={styles.wrapper} onClick={() => handleNavigate()}>

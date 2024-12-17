@@ -29,3 +29,16 @@
   letter-spacing: -0.5px;
   padding-bottom: 5rem;
 }
+.create {
+  width: 125rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.create span {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+}
