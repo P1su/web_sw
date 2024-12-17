@@ -1,13 +1,25 @@
 import styles from './PortfolioDetail.module.css';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Title from '../../../components/Title/Title';
 import useGetPortfolioDetail from '../../../hooks/queries/portfolio/useGetPortfolioDetail';
 import image from '../../../assets/img/portfolioPage.png'
+import useDeletePortfolio from '../../../hooks/queries/portfolio/useDeletePortfolio';
 
 const PortfolioDetail = () => {
   const { portfolioId } = useParams('portfolioId');
   const { data, isLoading } = useGetPortfolioDetail(portfolioId);
-  console.log(data);
+  const { mutate: deletePortfolio } = useDeletePortfolio(portfolioId);
+  const navigate = useNavigate();
+
+  const handleDelete = () => {
+    deletePortfolio({}, {
+      onSuccess: () => {
+        alert('포트폴리오가 삭제되었습니다.');
+        navigate('/portfolio');
+      },
+    });
+  };
+  
   if (isLoading) {
     return <div>로딩 중...</div>;
   }
@@ -17,6 +29,14 @@ const PortfolioDetail = () => {
       <Title url={image}>Portfolio</Title>
       <h2 className={styles.titleText}>{data.title}</h2>
       <p>{data.content}</p>
+        <div className={styles.modifySection}>
+          <span>
+            수정하기
+          </span>
+          <span onClick={() => {handleDelete()}}>
+            삭제하기
+          </span>
+        </div>
       <hr className={styles.hr}/>
       <section className={styles.bodySection}>
         <article className={styles.article}>

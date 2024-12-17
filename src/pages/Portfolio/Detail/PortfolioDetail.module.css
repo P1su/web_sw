@@ -1,5 +1,8 @@
 .pageWrapper {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .p {
   color: #121212;
@@ -10,7 +13,7 @@
   line-height: normal;
 }
 .hr {
-  width: 70%;
+  width: 125rem;
   border: 1px solid #d3d3d3;
   margin: 0.5em auto;
   margin-bottom: 2rem;
@@ -67,4 +70,20 @@
 }
 .linkSection {
   padding-bottom: 2rem;
+}
+.modifySection {
+  width: 125rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.modifySection span {
+  cursor: pointer;
 }
