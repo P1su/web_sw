@@ -32,14 +32,18 @@ const EventDetail = () => {
         <p className={styles.text}>
           매달 진행되는 새로운 이벤트들을 확인해보세요<br />
         </p>
-        <div className={styles.modifySection}>
-          <span>
-            수정하기
-          </span>
-          <span onClick={() => {handleDelete()}}>
-            삭제하기
-          </span>
-        </div>
+        {
+          localStorage.getItem('ACCESS_TOKEN') ? 
+            <div className={styles.modifySection}>
+              <span>
+                수정하기
+              </span>
+              <span onClick={() => {handleDelete()}}>
+                삭제하기
+              </span>
+            </div>
+          : null
+        }
         <hr className={styles.hr} />
       </section>
       <section className={styles.titleSection}>

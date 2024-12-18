@@ -7,7 +7,7 @@
   gap: 2rem;
 }
 .hr {
-  width: 100%;
+  width: 125rem;
   display: inline-block;
 }
 .reservationImage {
@@ -75,7 +75,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  padding: 7rem 0 2rem 0;
+  padding: 7rem 0 5rem 0;
 }
 .modifySection {
   width: 125rem;

@@ -28,14 +28,18 @@ const PortfolioDetail = () => {
     <div className={styles.pageWrapper}>
       <Title url={image}>Portfolio</Title>
       <h2 className={styles.titleText}>{data.title}</h2>
-        <div className={styles.modifySection}>
-          <span>
-            수정하기
-          </span>
-          <span onClick={() => {handleDelete()}}>
-            삭제하기
-          </span>
-        </div>
+      {
+        localStorage.getItem('ACCESS_TOKEN') ? 
+          <div className={styles.modifySection}>
+            <span>
+              수정하기
+            </span>
+            <span onClick={() => {handleDelete()}}>
+              삭제하기
+            </span>
+          </div>
+        : null
+      }
       <hr className={styles.hr}/>
       <section className={styles.bodySection}>
         <article className={styles.article}>
