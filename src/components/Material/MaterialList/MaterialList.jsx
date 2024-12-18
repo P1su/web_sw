@@ -1,5 +1,4 @@
 import MaterialItem from '../MaterialItem/MaterialItem';
-import Search from '../../forms/search/Search';
 import styles from './MaterialList.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -99,7 +98,6 @@ const MaterialList = ({ setCompare, isCompare=false, closeModal }) => {
           </>
         }
       </div>
-      <Search placeholder='원하시는 자재를 검색하세요'/>
       <div className={styles.listBox}>
         {currentPageData.map((materialItem) => (
           <MaterialItem 
