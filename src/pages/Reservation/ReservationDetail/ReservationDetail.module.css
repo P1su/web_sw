@@ -54,7 +54,9 @@
   color: #000000;
 }
 .imageSection {
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
 }
 .titleSection {
