@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './ImageInput.module.css';
 import addImage from '../../../assets/img/addImage.png';
 const ImageInput = ({ values, setValues, name}) => {
-  const [imgUrl, setImgUrl] = useState('');
+  const [imgUrl, setImgUrl] = useState(values.images[name]);
 
   const handleImageChange = (name, event) => {
     const file = event.target.files[0];
@@ -27,7 +27,7 @@ const ImageInput = ({ values, setValues, name}) => {
     <div className={styles.imageBox}>
       <label htmlFor={name} className={styles.imageBox}>
         {
-          imgUrl ==='' ? 
+          imgUrl === undefined ? 
           <img src={addImage} className={styles.imageBox}/>
           : 
           <img src={imgUrl} className={styles.imageBox}/>

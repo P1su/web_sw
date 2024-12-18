@@ -100,13 +100,13 @@ const Reservation = () => {
           />
           <Input 
             title='평수' 
-            placeholder='100000' 
+            placeholder='N평' 
             setValue={setValues}
             value={values.area}
             name='area'
           />
           <Input 
-            title='예상 견적' 
+            title='예산 한도' 
             placeholder='100000' 
             setValue={setValues}
             value={values.budget}
@@ -114,7 +114,7 @@ const Reservation = () => {
           />
           <Input 
             title='게시글 비밀번호' 
-            placeholder='100000' 
+            placeholder='비밀번호' 
             setValue={setValues}
             value={values.password}
             name='password'
@@ -150,18 +150,24 @@ const Reservation = () => {
           <ImageInput values={values} setValues={setValues} name='2' />
           <ImageInput values={values} setValues={setValues} name='3' />
         </section>
-          <Textarea title='시공부위' placeholder='ex)방문.틀 6셋트(방3, 화장실2, 거실터닝도어1)
-            샷시창.틀 확장형 5셋트 이중창 전체(방3, 거실1, 주방1)
-            걸레받이전체
-            현관문(내부만)
-            주방전체(싱크대상부장,하부장, 아일랜드, 냉장고장, 주방팬트리장)
-            작은방붙박이장
-            입구방붙박이장
-            안방드레스룸붙박이장, 화장대'
-            value={values.content}
-            setValue={setValues}
-            name='content'
-          />
+        <section className={styles.imageSection}>
+          <ImageInput values={values} setValues={setValues} name='4' />
+          <ImageInput values={values} setValues={setValues} name='5' />
+          <ImageInput values={values} setValues={setValues} name='6' />
+          <ImageInput values={values} setValues={setValues} name='7' />
+        </section>
+        <Textarea title='시공부위' placeholder='ex)방문.틀 6셋트(방3, 화장실2, 거실터닝도어1)
+          샷시창.틀 확장형 5셋트 이중창 전체(방3, 거실1, 주방1)
+          걸레받이전체
+          현관문(내부만)
+          주방전체(싱크대상부장,하부장, 아일랜드, 냉장고장, 주방팬트리장)
+          작은방붙박이장
+          입구방붙박이장
+          안방드레스룸붙박이장, 화장대'
+          value={values.content}
+          setValue={setValues}
+          name='content'
+        />
         <div className={styles.buttonField}>
           <BtnSmall onClick={handlePost}>문의 제출하기</BtnSmall>
         </div>

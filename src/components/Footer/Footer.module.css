@@ -17,7 +17,9 @@
   line-height: normal;
 }
 .infoBox {
+  display: flex;
   text-align: left;
+  gap: 2rem;
   font-family: Pretendard;
   padding: 0 20rem;
   font-size: 15px;
@@ -27,13 +29,15 @@
 }
 .nav {
   display: flex;
+  align-items: center;
   gap: 2rem;
+  padding-top: 7rem;
 }
 .a {
   display: flex;
   gap: 1rem;
   flex-direction: column;
-  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 .navItems {
   cursor: pointer;

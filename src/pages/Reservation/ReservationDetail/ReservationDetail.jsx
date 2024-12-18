@@ -38,7 +38,13 @@ const ReservationDetail = () => {
   return(
     <div className={styles.pageWrapper}>
       <Title url={image}>Reservation</Title>
-      <h2 className={styles.h2}>견적 문의 확인</h2>
+      <section>
+        <h2 className={styles.h2}>견적 문의 확인</h2>
+        <section className={styles.modifySection}>
+            <span onClick={() => {handleDelete()}}>삭제하기</span>
+          </section>
+        <hr className={styles.hr} />
+      </section>
       <section className={styles.body}>
         <div>
           <section className={styles.titleSection}>
@@ -73,10 +79,6 @@ const ReservationDetail = () => {
         <p className={styles.reservationContent}>
           {data.content}
         </p>
-        <section className={styles.modifySection}>
-          <span>수정하기</span>
-          <span onClick={() => {handleDelete()}}>삭제하기</span>
-        </section>
         <BtnLarge onClick={handleNavigate}>목록으로 돌아가기</BtnLarge>
       </section>
     </div>
