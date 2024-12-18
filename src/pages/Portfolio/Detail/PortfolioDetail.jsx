@@ -28,7 +28,6 @@ const PortfolioDetail = () => {
     <div className={styles.pageWrapper}>
       <Title url={image}>Portfolio</Title>
       <h2 className={styles.titleText}>{data.title}</h2>
-      <p>{data.content}</p>
         <div className={styles.modifySection}>
           <span>
             수정하기
@@ -50,7 +49,7 @@ const PortfolioDetail = () => {
               ))
             }
           </section>
-          <p>
+          <p className={styles.p}>
             {data.content}
           </p>
         </article>
