@@ -41,7 +41,6 @@ const ReservationDetail = () => {
       <section>
         <h2 className={styles.h2}>견적 문의 확인</h2>
         <section className={styles.modifySection}>
-            <span>수정하기</span>
             <span onClick={() => {handleDelete()}}>삭제하기</span>
           </section>
         <hr className={styles.hr} />

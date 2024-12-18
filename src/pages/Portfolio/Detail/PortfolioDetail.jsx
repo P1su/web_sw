@@ -38,9 +38,9 @@ const PortfolioDetail = () => {
   const navigate = useNavigate();
 
   console.log(values)
-  const handleEdit = () => {
+  /*const handleEdit = () => {
     setIsEdit(!isEdit);
-  };
+  };*/
   const handleButton = () => {
     if(isEdit){
       putPortfolio(values, {
@@ -83,9 +83,6 @@ const PortfolioDetail = () => {
       {
         localStorage.getItem('ACCESS_TOKEN') ? 
           <div className={styles.modifySection}>
-            <span onClick={() => handleEdit()}>
-              {isEdit ? '취소' : '수정하기'}
-            </span>
             <span onClick={() => {handleDelete()}}>
               삭제하기
             </span>
