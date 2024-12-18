@@ -5,13 +5,18 @@ import BtnSmall from '../../../components/buttons/Small/BtnSmall';
 import useGetEventItem from '../../../hooks/queries/event/useGetEventItem';
 import image from '../../../assets/img/eventPage.png'
 import useDeleteEvent from '../../../hooks/queries/event/useDeleteEvent';
+import { useState } from 'react';
 
 const EventDetail = () => {
   const { id } = useParams('id');
   const { data } = useGetEventItem(id);
+  const [isEdit, setIsEdit] = useState(false);
   const { mutate: deleteEvent } =  useDeleteEvent(id);
   const navigate = useNavigate();
   
+  const handleEdit = () => {
+    setIsEdit(!isEdit);
+  };
   const handleNavigate = () => {
     navigate('/event');
   };
@@ -35,7 +40,7 @@ const EventDetail = () => {
         {
           localStorage.getItem('ACCESS_TOKEN') ? 
             <div className={styles.modifySection}>
-              <span>
+              <span onClick={() => handleEdit()}>
                 수정하기
               </span>
               <span onClick={() => {handleDelete()}}>
@@ -46,6 +51,7 @@ const EventDetail = () => {
         }
         <hr className={styles.hr} />
       </section>
+
       <section className={styles.titleSection}>
         <h3 className={styles.h3}>{data?.title}</h3>
         <span className={styles.dateSpan}>2024.12.01</span>

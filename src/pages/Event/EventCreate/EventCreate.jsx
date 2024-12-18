@@ -14,6 +14,7 @@ const EventCreate = () => {
     event_date: '',
     content: '',
   });
+  
   const onChange = (e) => {
     setValues((prevValues) => {
       return {
