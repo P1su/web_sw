@@ -22,7 +22,7 @@ const Footer = () => {
   return(
     <footer className={styles.footerWrapper}>
       <div className={styles.titleBox}>
-        <img src={logo} width={'120px'} /> <br />
+        <img src={logo} width={'120px'} height={'66rem'} /> <br />
         대표: 김우심 <br />
         TEL: 010-9160-9886 <br />
         사업자등록증: 240-30-00847 <br />

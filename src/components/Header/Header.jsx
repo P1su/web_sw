@@ -25,7 +25,7 @@ const Header = () => {
 
   return(
     <header className={styles.header}>
-      <img src={logo} width={'150px'} onClick={() => handleMain()}/>
+      <img src={logo} width={'150px'} height={'83rem'} onClick={() => handleMain()}/>
       <nav className={styles.navBar}>
         {
           navItems.map((item) => (

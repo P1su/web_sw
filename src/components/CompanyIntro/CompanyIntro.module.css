@@ -41,12 +41,10 @@
 
 .imageContainer {
   width: 50%;
-  height: auto;
 }
 
 .image {
   width: 100%;
-  height: auto;
-  max-height: 550px;
+  height: 55rem;
   object-fit: cover;
 }
