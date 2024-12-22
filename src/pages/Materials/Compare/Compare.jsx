@@ -9,7 +9,7 @@ import useModal from '../../../hooks/common/useModal';
 import Modal from '../../../components/Modal/Modal';
 import MaterialList from './../../../components/Material/MaterialList/MaterialList';
 import useGetMaterialItem from '../../../hooks/queries/material/useGetMaterialItem';
-import image from '../../../assets/img/materialPage.png'
+import image from '../../../assets/img/materialPage.webp'
 
 const Compare = () => {
   const navigate = useNavigate();

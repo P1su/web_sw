@@ -3,7 +3,7 @@ import styles from './MaterialDetail.module.css';
 import Title from '../../../components/Title/Title';
 import BtnSmall from '../../../components/buttons/Small/BtnSmall';
 import useGetMaterialItem from '../../../hooks/queries/material/useGetMaterialItem';
-import image from '../../../assets/img/materialPage.png'
+import image from '../../../assets/img/materialPage.webp'
 
 
 const MaterialDetail = () => {

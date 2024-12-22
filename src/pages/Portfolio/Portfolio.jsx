@@ -1,7 +1,7 @@
 import PortfolioList from '../../components/portfolio/portfoiloList/PortfolioList';
 import Title from '../../components/Title/Title';
 import styles from './Portfolio.module.css';
-import image from '../../assets/img/portfolioPage.png'
+import image from '../../assets/img/portfolioPage.webp'
 import { useNavigate } from 'react-router-dom';
 
 const Portfolio = () => {

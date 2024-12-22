@@ -7,7 +7,7 @@ import BtnSmall from '../../components/buttons/Small/BtnSmall';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import usePostReservation from '../../hooks/queries/reservation/usePostReservation';
-import image from '../../assets/img/reservationPage.png'
+import image from '../../assets/img/reservationPage.webp'
 
 const Reservation = () => {
   const navigate = useNavigate();

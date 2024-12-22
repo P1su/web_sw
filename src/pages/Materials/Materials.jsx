@@ -1,7 +1,7 @@
 import Title from '../../components/Title/Title';
 import styles from './Materials.module.css';
 import MaterialList from './../../components/Material/MaterialList/MaterialList';
-import image from '../../assets/img/materialPage.png'
+import image from '../../assets/img/materialPage.webp'
 
 const Materials = () => {
   return(

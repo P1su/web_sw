@@ -1,6 +1,6 @@
 import styles from './EventCreate.module.css';
 import Title from '../../../components/Title/Title';
-import image from '../../../assets/img/eventPage.png';
+import image from '../../../assets/img/eventPage.webp'
 import BtnSmall from '../../../components/buttons/Small/BtnSmall';
 import { useState } from 'react';
 import usePostEvent from '../../../hooks/queries/event/usePostEvent';

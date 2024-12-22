@@ -3,7 +3,7 @@ import styles from './EventDetail.module.css';
 import Title from '../../../components/Title/Title';
 import BtnSmall from '../../../components/buttons/Small/BtnSmall';
 import useGetEventItem from '../../../hooks/queries/event/useGetEventItem';
-import image from '../../../assets/img/eventPage.png'
+import image from '../../../assets/img/eventPage.webp'
 import useDeleteEvent from '../../../hooks/queries/event/useDeleteEvent';
 import { useState, useEffect } from 'react';
 import EventForm from '../../../components/forms/event/EventForm';

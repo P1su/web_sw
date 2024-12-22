@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './ImageInput.module.css';
-import addImage from '../../../assets/img/addImage.png';
+import addImage from '../../../assets/img/addImage.webp';
 const ImageInput = ({ values, setValues, name}) => {
   const [imgUrl, setImgUrl] = useState(values.images[name]);
 

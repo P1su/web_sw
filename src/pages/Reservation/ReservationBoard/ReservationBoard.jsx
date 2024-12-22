@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import ReservationList from '../../../components/reservation/ReservationList/ReservationList';
 import Title from '../../../components/Title/Title';
 import styles from './ReservationBoard.module.css';
-import image from '../../../assets/img/reservationPage.png';
+import image from '../../../assets/img/reservationPage.webp';
 
 const ReservationBoard = () => {
   const navigate = useNavigate();

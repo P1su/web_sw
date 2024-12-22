@@ -5,7 +5,7 @@ import BtnLarge from './../../components/buttons/Large/BtnLarge';
 import usePostLogin from '../../hooks/queries/login/usePostLogin';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import image from '../../assets/img/mainPage.png'
+import image from '../../assets/img/mainPage.webp'
 import BtnSmall from '../../components/buttons/Small/BtnSmall';
 
 const Login = () => {

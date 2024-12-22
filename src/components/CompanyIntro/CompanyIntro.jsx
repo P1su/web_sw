@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import styles from './CompanyIntro.module.css';
-import companyIntroImg from '../../assets/img/companyIntro.jpg';
-import companyIntroImg2 from '../../assets/img/companyIntro2.jpg';
+import companyIntroImg from '../../assets/img/companyIntro.webp';
+import companyIntroImg2 from '../../assets/img/companyIntro2.webp';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

@@ -1,6 +1,6 @@
 import styles from './Main.module.css'
 import Title from '../../components/Title/Title';
-import image from '../../assets/img/mainPage.png'
+import image from '../../assets/img/mainPage.webp'
 import MyCalendar from '../../components/Calendar/MyCalendar';
 import CompanyIntro from '../../components/CompanyIntro/CompanyIntro';
 

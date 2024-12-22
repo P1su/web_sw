@@ -1,6 +1,6 @@
 import styles from './PortfolioCreate.module.css';
 import Title from '../../../components/Title/Title';
-import image from '../../../assets/img/portfolioPage.png';
+import image from '../../../assets/img/portfolioPage.webp';
 import { useState } from 'react';
 import usePostPortfolio from '../../../hooks/queries/portfolio/usePostPortfolio';
 import { useNavigate } from 'react-router-dom';

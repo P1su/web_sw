@@ -4,7 +4,7 @@ import styles from './ReservationDetail.module.css';
 import InfoBox from '../../../components/InfoBox/InfoBox';
 import BtnLarge from '../../../components/buttons/Large/BtnLarge';
 import useGetReservationDetail from '../../../hooks/queries/reservation/useGetReservationDetail';
-import image from '../../../assets/img/reservationPage.png';
+import image from '../../../assets/img/reservationPage.webp';
 import useDeleteReservation from '../../../hooks/queries/reservation/useDeleteReservation';
 
 const ReservationDetail = () => {

@@ -2,7 +2,7 @@ import styles from './PortfolioDetail.module.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import Title from '../../../components/Title/Title';
 import useGetPortfolioDetail from '../../../hooks/queries/portfolio/useGetPortfolioDetail';
-import image from '../../../assets/img/portfolioPage.png'
+import image from '../../../assets/img/portfolioPage.webp'
 import useDeletePortfolio from '../../../hooks/queries/portfolio/useDeletePortfolio';
 import { useState, useEffect } from 'react';
 import PortfolioForm from '../../../components/forms/portfolio/PortfolioForm';

@@ -1,7 +1,7 @@
 import EventList from '../../components/Event/EventList/EventList';
 import Title from '../../components/Title/Title';
 import styles from './Event.module.css';
-import image from '../../assets/img/eventPage.png'
+import image from '../../assets/img/eventPage.webp'
 import { useNavigate } from 'react-router-dom';
 
 const Event = () => {
