@@ -1,6 +1,19 @@
 import { createBrowserRouter } from 'react-router-dom';
+import Main from '../pages/Main/Main';
 import Layout from '../layouts/Layout';
-import * as Lazy from './lazy';
+import Materials from '../pages/Materials/Materials';
+import Login from '../pages/Login/Login';
+import MaterialDetail from '../pages/Materials/MaterialDetail/MaterialDetail';
+import Compare from '../pages/Materials/Compare/Compare';
+import Reservation from '../pages/Reservation/Reservation';
+import ReservationDetail from '../pages/Reservation/ReservationDetail/ReservationDetail';
+import Event from '../pages/Event/Event';
+import EventDetail from '../pages/Event/EventDetail/EventDetail';
+import Portfolio from '../pages/Portfolio/Portfolio';
+import PortfolioDetail from '../pages/Portfolio/Detail/PortfolioDetail';
+import ReservationBoard from '../pages/Reservation/ReservationBoard/ReservationBoard';
+import EventCreate from '../pages/Event/EventCreate/EventCreate';
+import PortfolioCreate from '../pages/Portfolio/PortfolioCreate/PortfolioCreate';
 
 const router = createBrowserRouter([
   {
@@ -9,59 +22,59 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Lazy.Main />,
+        element: <Main />,
       },
       {
         path: '/materials',
-        element: <Lazy.Materials />,
+        element: <Materials />,
       },
       {
         path: '/material/:company/:name',
-        element: <Lazy.MaterialDetail />,
+        element: <MaterialDetail />,
       },
       {
         path: '/compare',
-        element: <Lazy.Compare />,
+        element: <Compare />,
       },
       {
         path: '/reservation',
-        element: <Lazy.Reservation />,
+        element: <Reservation />,
       },
       {
         path: '/reservation-board',
-        element: <Lazy.ReservationBoard />
+        element: <ReservationBoard />
       },
       {
         path: '/reservation/:id',
-        element: <Lazy.ReservationDetail />,
+        element: <ReservationDetail />,
       },
       {
         path: '/login',
-        element: <Lazy.Login />,
+        element: <Login />,
       },
       {
         path: '/event',
-        element: <Lazy.Event />,
+        element: <Event />,
       },
       {
         path: '/event-create',
-        element: <Lazy.EventCreate />,
+        element: <EventCreate />,
       },
       {
         path: '/event/:id',
-        element: <Lazy.EventDetail />,
+        element: <EventDetail />,
       },
       {
         path: '/portfolio',
-        element: <Lazy.Portfolio />,
+        element: <Portfolio />,
       },
       {
         path: '/portfolio/:portfolioId',
-        element: <Lazy.PortfolioDetail />,
+        element: <PortfolioDetail />,
       },
       {
         path: '/portfolio-create',
-        element: <Lazy.PortfolioCreate />,
+        element: <PortfolioCreate />,
       },
     ],
   },
