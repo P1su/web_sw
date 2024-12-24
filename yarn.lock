@@ -336,6 +336,11 @@
   dependencies:
     levn "^0.4.1"
 
+"@fontsource/pretendard@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/pretendard/-/pretendard-5.1.0.tgz#40bae85ed21c874b6c51c1555019ec4ec9bf8663"
+  integrity sha512-aUkTiTYKDX/919OJqKKyly4cuoets76Cwjqw1qNTCFpIdVMpOm5uGEpreIPabDdp1ReYdeVfB94Wxyn5Q9jrBQ==
+
 "@fullcalendar/core@^6.1.15":
   version "6.1.15"
   resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-6.1.15.tgz#6c3f5259fc4589870228853072131219bb533f6e"
